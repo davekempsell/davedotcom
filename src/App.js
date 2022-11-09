@@ -1,12 +1,11 @@
 import './App.css';
+import { Projects } from './components/Projects';
 
 function App() {
   return (
-      <div className="main-container">
-        <p>
-          davekempsell.com
-        </p>
-      </div>
+    <div className="app">
+      {Projects()}
+    </div>
   );
 }
 
