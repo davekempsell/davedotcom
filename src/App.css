@@ -7,14 +7,15 @@
 }
 
 :root {
-  --background-color: #282c34;
+  --header-background-color: rgb(40, 44, 52);
+  --main-background-color: rgb(56, 61, 72);
   --border-color: #ffffff20;
 }
 
 /* Styling for Header component */
 header {
-  background-color: var(--background-color);
-  min-height: 10vh;
+  background-color: var(--header-background-color);
+  height: 10vh;
   width: 100vw;
   min-width: 250px;
   display: flex;
@@ -45,7 +46,7 @@ header > .socials > a:hover {
 
 /* Styling for Projects component */
 .main-container {
-  background-color: var(--background-color);
+  background-color: var(--main-background-color);
   min-height: 90vh;
   width: 100vw;
   display: flex;
@@ -60,6 +61,35 @@ header > .socials > a:hover {
   height: 10vh;
   border: solid 1px var(--border-color);
   border-bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  gap: 1rem;
+}
+
+.main-container > .title > .nav-button {
+  all: unset;
+  text-align: center;
+  height: 100%;
+  font-size: x-large;
+  flex-basis: 20%;
+  padding: none;
+  background-color: var(--main-background-color);
+  color: white;
+  transition: all .2s ease-in-out;
+}
+
+.main-container > .title > .nav-button:hover {
+  cursor: pointer;
+}
+
+#nav-button-left {
+  border-right: solid 1px var(--border-color)
+}
+
+#nav-button-right {
+  border-left: solid 1px var(--border-color)
 }
 
 .project-content {
@@ -72,12 +102,46 @@ header > .socials > a:hover {
   height: 80vh;
   border: solid 1px var(--border-color);
   border-right: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.project-content > .images > .project-image {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 90%;
+  margin: 10px;
 }
 
 .project-content > .description {
   width: 50vw;
   height: 80vh;
+  min-height: 70vh;
   border: solid 1px var(--border-color);
+  color: white;
+  font-size: 1rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.project-content > .description > a {
+  min-width: max-content;
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+  color: white;
+}
+
+.project-content > .description > a > img {
+  height: 50px;
+}
+
+.project-content > .description > a > p {
+  align-self: center;
 }
 
 @media (max-width: 480px) {
