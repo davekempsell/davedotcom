@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useSwipeable } from 'react-swipeable'
 import { LexiconProject } from "./Projects/LexiconProject";
 import { GmsProject } from "./Projects/GmsProject";
 import { LoyalBeanProject } from './Projects/LoyalBeanProject'
@@ -18,8 +19,14 @@ export function Projects() {
     setActiveIndex(newIndex)
   }
 
+  const handlers = useSwipeable({
+    onSwipedLeft: () => updateIndex(activeIndex + 1),
+    onSwipedRight: () => updateIndex(activeIndex - 1)
+  })
+
+
   return (
-    <div className="carousel">
+    <div {...handlers} className="carousel">
       <div className="carousel-inner" style={{ transform: `translateX(-${activeIndex * 100}%)` }}>
         {LexiconProject(activeIndex, updateIndex)}
         {LoyalBeanProject(activeIndex, updateIndex)}
