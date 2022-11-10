@@ -1,31 +1,12 @@
-import { faLeftLong, faRightLong } from "@fortawesome/free-solid-svg-icons";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { ProjectTitle } from "./ProjectTitle";
 
 export function TastebookProject (activeIndex, updateIndex) {
 
   return (
     <div className="project-container">
-      <div className='title'>
-        <button 
-          id="nav-button-left" 
-          className="nav-button"
-          onClick={() => {
-            updateIndex(activeIndex - 1);
-          }}
-          >
-          <FontAwesomeIcon icon={faLeftLong} />
-        </button>
-        <h3>TASTEBOOK</h3>
-        <button 
-          id="nav-button-right"
-          className="nav-button"
-          onClick={() => {
-            updateIndex(activeIndex + 1);
-          }}>
-          <FontAwesomeIcon icon={faRightLong} />
-        </button>
-      </div>
+      {ProjectTitle('TASTEBOOK', activeIndex, updateIndex)}
       <div className="project-content">
         <div className='images'>
           <div className="project-image" style={{ backgroundImage: `url(/images/tastebook2.png)`}}></div>

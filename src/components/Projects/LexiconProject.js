@@ -1,31 +1,10 @@
-import { faLeftLong } from "@fortawesome/free-solid-svg-icons";
-import { faRightLong } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { ProjectTitle } from "./ProjectTitle"
 
 export function LexiconProject(activeIndex, updateIndex) {
 
   return (
     <div className="project-container">
-      <div className='title'>
-        <button 
-          id="nav-button-left" 
-          className="nav-button"
-          onClick={() => {
-            updateIndex(activeIndex - 1);
-          }}
-          >
-          <FontAwesomeIcon icon={faLeftLong} />
-        </button>
-        <h3>LEXICON</h3>
-        <button 
-          id="nav-button-right"
-          className="nav-button"
-          onClick={() => {
-            updateIndex(activeIndex + 1);
-          }}>
-        <FontAwesomeIcon icon={faRightLong} />
-        </button>
-      </div>
+      {ProjectTitle('LEXICON', activeIndex, updateIndex)}
       <div className="project-content">
         <div className='images'>
         <div className="project-image" style={{ backgroundImage: `url(/images/lexicon-hardmode.gif)`}}></div>
