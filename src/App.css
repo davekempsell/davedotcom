@@ -44,12 +44,23 @@ header > .socials > a:hover {
   transform: scale(1.1);
 }
 
+/* Styling for Carousel */
+.carousel {
+  overflow: hidden;
+}
+
+.carousel-inner {
+  white-space: nowrap;
+  transition: transform 0.5s;
+}
+
 /* Styling for Projects component */
+
 .project-container {
   background-color: var(--main-background-color);
   min-height: 90vh;
-  width: 100vw;
-  display: flex;
+  width: '100%';
+  display: inline-flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
@@ -98,11 +109,12 @@ header > .socials > a:hover {
 
 .project-content > .images {
   width: 50vw;
-  height: 80vh;
+  min-height: 80vh;
   border: solid 1px var(--border-color);
   border-right: 0;
   display: flex;
   justify-content: center;
+  padding: 1rem;
 }
 
 .project-content > .images > .project-image {
@@ -125,6 +137,12 @@ header > .socials > a:hover {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+}
+
+.project-description {
+  display: flex;
+  flex-direction: column;
+  white-space: initial;
 }
 
 .project-content > .description > a {
@@ -157,12 +175,12 @@ header > .socials > a:hover {
   }
   .project-content > .images {
     width: 100vw;
-    height: 60vh;
+    min-height: 60vh;
     border-right: solid 1px var(--border-color);
     border-bottom: 0;
   }
   .project-content > .description {
     width: 100vw;
-    height: 60vh;
+    min-height: 60vh;
   }
 }
