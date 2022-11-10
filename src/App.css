@@ -45,7 +45,7 @@ header > .socials > a:hover {
 }
 
 /* Styling for Projects component */
-.main-container {
+.project-container {
   background-color: var(--main-background-color);
   min-height: 90vh;
   width: 100vw;
@@ -56,7 +56,7 @@ header > .socials > a:hover {
   font-size: calc(10px + 2vmin);
 }
 
-.main-container > .title {
+.project-container > .title {
   width: 100vw;
   height: 10vh;
   border: solid 1px var(--border-color);
@@ -68,7 +68,7 @@ header > .socials > a:hover {
   gap: 1rem;
 }
 
-.main-container > .title > .nav-button {
+.project-container > .title > .nav-button {
   all: unset;
   text-align: center;
   height: 100%;
@@ -77,10 +77,9 @@ header > .socials > a:hover {
   padding: none;
   background-color: var(--main-background-color);
   color: white;
-  transition: all .2s ease-in-out;
 }
 
-.main-container > .title > .nav-button:hover {
+.project-container > .title > .nav-button:hover {
   cursor: pointer;
 }
 
@@ -129,15 +128,23 @@ header > .socials > a:hover {
 }
 
 .project-content > .description > a {
+  all: unset;
   min-width: max-content;
   display: flex;
+  gap: 0.5rem;
   justify-content: center;
   text-decoration: none;
   color: white;
 }
 
+.project-content > .description > a:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
 .project-content > .description > a > img {
   height: 50px;
+  color: white;
 }
 
 .project-content > .description > a > p {
