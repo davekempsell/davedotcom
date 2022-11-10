@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 import { LexiconProject } from "./Projects/LexiconProject";
 import { GmsProject } from "./Projects/GmsProject";
-import { LoyalBeanProject } from './Projects/LoyalBean'
+import { LoyalBeanProject } from './Projects/LoyalBeanProject'
+import { TastebookProject } from './Projects/TastebookProject'
 
 export function Projects() {
   const [activeIndex, setActiveIndex] = useState(0);
-  let children = 3
+  let children = 4
 
   const updateIndex = (newIndex) => {
     if (newIndex < 0) {
@@ -23,6 +24,7 @@ export function Projects() {
         {LexiconProject(activeIndex, updateIndex)}
         {LoyalBeanProject(activeIndex, updateIndex)}
         {GmsProject(activeIndex, updateIndex)}
+        {TastebookProject(activeIndex, updateIndex)}
       </div>
     </div>
   );

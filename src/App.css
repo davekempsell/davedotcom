@@ -143,6 +143,7 @@ header > .socials > a:hover {
   display: flex;
   flex-direction: column;
   white-space: initial;
+  overflow: scroll;
 }
 
 .project-content > .description > a {
