@@ -1,10 +1,12 @@
 import { ProjectTitle } from "./ProjectTitle";
+import { ProjectDots } from "./ProjectDots";
 
-export function GmsProject(activeIndex, updateIndex) {
+export function GmsProject(activeIndex, updateIndex, children) {
 
   return (
     <div className="project-container">
       {ProjectTitle('GMS CALCULATOR', activeIndex, updateIndex)}
+      {ProjectDots(activeIndex, children)}
       <div className="project-content">
         <div className='images'>
         <div className="project-image" style={{ backgroundImage: `url(/images/gms-calculator.png)`}}></div>

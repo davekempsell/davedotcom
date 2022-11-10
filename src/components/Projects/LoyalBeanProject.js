@@ -1,12 +1,14 @@
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { ProjectTitle } from "./ProjectTitle";
+import { ProjectDots } from "./ProjectDots";
 
-export function LoyalBeanProject (activeIndex, updateIndex) {
+export function LoyalBeanProject (activeIndex, updateIndex, children) {
 
   return (
     <div className="project-container">
       {ProjectTitle('LOYAL BEAN', activeIndex, updateIndex)}
+      {ProjectDots(activeIndex, children)}
       <div className="project-content">
         <div className='images'>
           <div className="project-image" style={{ backgroundImage: `url(/images/samsung-bean1.png)`}}></div>

@@ -13,7 +13,7 @@ export function ProjectTitle(title, activeIndex, updateIndex) {
         >
         <FontAwesomeIcon icon={faLeftLong} />
       </button>
-      <h3>{title}</h3>
+        <h3>{title}</h3>
       <button 
         id="nav-button-right"
         className="nav-button"

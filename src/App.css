@@ -59,7 +59,7 @@ header > .socials > a:hover {
 .project-container {
   background-color: var(--main-background-color);
   min-height: 90vh;
-  width: '100%';
+  width: 100%;
   display: inline-flex;
   flex-direction: column;
   align-items: center;
@@ -68,10 +68,9 @@ header > .socials > a:hover {
 }
 
 .project-container > .title {
-  width: 100vw;
+  width: 100%;
   height: 10vh;
   border: solid 1px var(--border-color);
-  border-bottom: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -107,11 +106,27 @@ header > .socials > a:hover {
   justify-content: center;
 }
 
+.dots-container {
+  display: none;
+  border: solid 1px var(--border-color);
+  border-bottom: none;
+  border-top: none; 
+  height: 3vh;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  gap: 0.2rem;
+  color: white;
+  opacity: 0.2;
+  font-size: calc(2vh);
+}
+
 .project-content > .images {
   width: 50vw;
   min-height: 60vh;
   border: solid 1px var(--border-color);
   border-right: 0;
+  border-top: 0;
   display: flex;
   justify-content: center;
   padding: 1rem;
@@ -130,6 +145,7 @@ header > .socials > a:hover {
   height: 80vh;
   min-height: 70vh;
   border: solid 1px var(--border-color);
+  border-top: none;
   color: white;
   font-size: 1rem;
   padding: 1rem;
@@ -177,6 +193,9 @@ header > .socials > a:hover {
 }
 
 @media (max-width: 480px) {
+  .dots-container {
+    display: flex;
+  }
   .project-content {
     flex-direction: column;
   }
@@ -189,5 +208,6 @@ header > .socials > a:hover {
   .project-content > .description {
     width: 100vw;
     min-height: 60vh;
+    border-top: solid 1px var(--border-color)
   }
 }
