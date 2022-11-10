@@ -109,7 +109,7 @@ header > .socials > a:hover {
 
 .project-content > .images {
   width: 50vw;
-  min-height: 80vh;
+  min-height: 60vh;
   border: solid 1px var(--border-color);
   border-right: 0;
   display: flex;
@@ -153,6 +153,7 @@ header > .socials > a:hover {
   justify-content: center;
   text-decoration: none;
   color: white;
+  margin-top: 10px;
 }
 
 .project-content > .description > a:hover {
@@ -161,6 +162,11 @@ header > .socials > a:hover {
 }
 
 .project-content > .description > a > img {
+  height: 50px;
+  color: white;
+}
+
+.project-content > .description > a > #github {
   height: 50px;
   color: white;
 }
@@ -175,7 +181,7 @@ header > .socials > a:hover {
   }
   .project-content > .images {
     width: 100vw;
-    min-height: 60vh;
+    min-height: 40vh;
     border-right: solid 1px var(--border-color);
     border-bottom: 0;
   }

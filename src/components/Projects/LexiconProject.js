@@ -32,7 +32,7 @@ export function LexiconProject(activeIndex, updateIndex) {
         </div>
         <div className='description'>
           <div className="project-description">
-            <p>I built Lexicon in October 2022 as an independent project to develop a single page React app. It is based on the popular NY Times word game, Wordle.</p>
+            <p>I built Lexicon in October 2022 as an independent project to develop a single page React app. It is based on the popular New York Times word game, Wordle.</p>
             <p>The idea behind it was to update the rules on 'hard mode' to make the game more difficult. The original version of the game still allows you to use letters that have been revealed to not be in the word. Lexicon changes that, as well as updated logic to prevent a letter being used in a place the player knows it not to be.</p>
             <p>Lexicon was built in React, using node.js with a simple Express server hosted through Heroku.</p>
           </div>

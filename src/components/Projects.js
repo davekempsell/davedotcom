@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import { LexiconProject } from "./Projects/LexiconProject";
 import { GmsProject } from "./Projects/GmsProject";
+import { LoyalBeanProject } from './Projects/LoyalBean'
 
 export function Projects() {
   const [activeIndex, setActiveIndex] = useState(0);
-  let children = 2
+  let children = 3
 
   const updateIndex = (newIndex) => {
     if (newIndex < 0) {
@@ -20,6 +21,7 @@ export function Projects() {
     <div className="carousel">
       <div className="carousel-inner" style={{ transform: `translateX(-${activeIndex * 100}%)` }}>
         {LexiconProject(activeIndex, updateIndex)}
+        {LoyalBeanProject(activeIndex, updateIndex)}
         {GmsProject(activeIndex, updateIndex)}
       </div>
     </div>
