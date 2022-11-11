@@ -1,5 +1,5 @@
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
-import { faEnvelope} from "@fortawesome/free-solid-svg-icons";
+import { faEnvelope, faBars } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import '../App.css';
@@ -7,9 +7,15 @@ import '../App.css';
 function Header() {
   return (
       <header className="App-header">
-        <a href="/">
+        <div className="header-menu">
+          <button>
+            <FontAwesomeIcon icon={faBars} />
+          </button>
+          
+        </div>
+        
           <p>davekempsell.com</p>
-        </a>
+        
         <div className="socials">
           <a href='https://github.com/davekempsell' target="_blank" rel="noreferrer">
             <FontAwesomeIcon icon={faGithub} />

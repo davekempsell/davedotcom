@@ -21,19 +21,38 @@ header {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   font-size: calc(10px + 2vmin);
   color: white;
   gap: 2rem;
+}
+
+header > .header-menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 1rem;
+}
+
+header > .header-menu > button {
+  all: unset;
+  cursor: pointer;
+  transition: all .2s ease-in-out;
+}
+
+header > .header-menu > button:hover {
+  color: lightgray;
+  transform: scale(1.1);
 }
 
 header > .socials {
   display: flex;
   gap: 2rem;
   justify-content: space-around;
+  margin-right: 1rem;
 }
 
-header > .socials > a, header > a {
+header > .socials > a {
   color: white;
   text-decoration: none;
   transition: all .2s ease-in-out;
