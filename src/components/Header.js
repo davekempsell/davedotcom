@@ -11,11 +11,8 @@ function Header() {
           <button>
             <FontAwesomeIcon icon={faBars} />
           </button>
-          
         </div>
-        
-          <p>davekempsell.com</p>
-        
+        <p>Dave Kempsell</p>
         <div className="socials">
           <a href='https://github.com/davekempsell' target="_blank" rel="noreferrer">
             <FontAwesomeIcon icon={faGithub} />
