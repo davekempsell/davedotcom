@@ -8,12 +8,12 @@ export function LoyalBeanProject (activeIndex, updateIndex, children) {
   return (
     <div className="project-container">
       {ProjectTitle('LOYAL BEAN', activeIndex, updateIndex)}
-      {ProjectDots(activeIndex, children)}
       <div className="project-content">
         <div className='images'>
           <div className="project-image" style={{ backgroundImage: `url(/images/samsung-bean1.png)`}}></div>
           <div className="project-image" style={{ backgroundImage: `url(/images/iphone-bean.png)`}}></div>
         </div>
+        {ProjectDots(activeIndex, children)}
         <div className='description'>
           <div className="project-description">
             <p>Loyal Bean was made during the final group project on the Makers Academy bootcamp.</p>

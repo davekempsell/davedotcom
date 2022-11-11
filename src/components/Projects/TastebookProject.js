@@ -8,11 +8,11 @@ export function TastebookProject (activeIndex, updateIndex, children) {
   return (
     <div className="project-container">
       {ProjectTitle('TASTEBOOK', activeIndex, updateIndex)}
-      {ProjectDots(activeIndex, children)}
       <div className="project-content">
         <div className='images'>
           <div className="project-image" style={{ backgroundImage: `url(/images/tastebook2.png)`}}></div>
         </div>
+        {ProjectDots(activeIndex, children)}
         <div className='description'>
           <div className="project-description">
             <p>Tastebook was a group project during the Makers Academy bootcamp where we modified an existing code base to develop a Facebook clone. Tastebook was designed as a social media site for people to share their favourite recipes, leaving likes and comments, with each user having a profile page where all of their recipes could be found.</p>

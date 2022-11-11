@@ -6,11 +6,11 @@ export function LexiconProject(activeIndex, updateIndex, children) {
   return (
     <div className="project-container">
       {ProjectTitle('LEXICON', activeIndex, updateIndex)}
-      {ProjectDots(activeIndex, children)}
       <div className="project-content">
         <div className='images'>
         <div className="project-image" style={{ backgroundImage: `url(/images/lexicon-hardmode.gif)`}}></div>
         </div>
+        {ProjectDots(activeIndex, children)}
         <div className='description'>
           <div className="project-description">
             <p>Lexicon was built in October 2022 as an independent project to develop a single page React app. It is based on the popular New York Times word game, Wordle.</p>

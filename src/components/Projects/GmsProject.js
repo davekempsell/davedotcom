@@ -6,11 +6,11 @@ export function GmsProject(activeIndex, updateIndex, children) {
   return (
     <div className="project-container">
       {ProjectTitle('GMS CALCULATOR', activeIndex, updateIndex)}
-      {ProjectDots(activeIndex, children)}
       <div className="project-content">
         <div className='images'>
         <div className="project-image" style={{ backgroundImage: `url(/images/gms-calculator.png)`}}></div>
         </div>
+        {ProjectDots(activeIndex, children)}
         <div className='description'>
           <div className="project-description">
             <p>GMS stands for 'Gold Medal Speed', a measurement used in rowing to compare different types of boats across varying distances. The app was built to make it easy to calculate this when coaching rowing sessions.</p>
