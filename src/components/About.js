@@ -1,6 +1,9 @@
+import { Header } from "./Header";
+
 export function About() {
   return (
     <div>
+      { Header() }
       About Me
     </div>
   )

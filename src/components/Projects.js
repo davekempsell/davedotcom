@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useSwipeable } from 'react-swipeable'
 
+import { Header } from './Header'
 import { LexiconProject } from "./Projects/LexiconProject";
 import { GmsProject } from "./Projects/GmsProject";
 import { LoyalBeanProject } from './Projects/LoyalBeanProject'
@@ -28,6 +29,7 @@ export function Projects() {
 
   return (
     <div {...handlers} className="carousel">
+      {Header()}
       <div className="carousel-inner" style={{ transform: `translateX(-${activeIndex * 100}%)` }}>
         {LexiconProject(activeIndex, updateIndex, projects)}
         {LoyalBeanProject(activeIndex, updateIndex, projects)}

@@ -11,7 +11,7 @@ export function ProjectTitle(title, activeIndex, updateIndex) {
           updateIndex(activeIndex - 1);
         }}
         >
-        <FontAwesomeIcon icon={faLeftLong} />
+        <FontAwesomeIcon id="nav-left" icon={faLeftLong} />
       </button>
         <h3>{title}</h3>
       <button 

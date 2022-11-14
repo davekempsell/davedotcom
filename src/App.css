@@ -189,6 +189,9 @@ header > .socials > a:hover {
 
 .project-container > .title > .nav-button:hover {
   cursor: pointer;
+}
+
+.nav-button:hover #nav-left {
   transform: scale(1.2);
 }
 
