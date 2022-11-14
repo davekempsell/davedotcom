@@ -265,10 +265,10 @@ header > .socials > a:hover {
   background-color: var(--background);
   color: white;
   border-radius: 10px;
-  padding-left: 0.5rem;
+  /* padding-left: 0.5rem;
   padding-right: 0.5rem;
   padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
+  padding-bottom: 0.5rem; */
   font-size: calc(8px + 1vh)
 }
 
@@ -279,14 +279,19 @@ header > .socials > a:hover {
 
 .project-content > .description > a > img {
   height: 40px;
+  padding-left:0.5rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
 .project-content > .description > a > #github {
   height: 40px;
+  padding: 0.5rem;
 }
 
 .project-content > .description > a > p {
   align-self: center;
+  padding-right: 0.5rem;
 }
 
 @media (max-width: 480px) {
