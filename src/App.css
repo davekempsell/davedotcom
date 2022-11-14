@@ -94,16 +94,6 @@ header > .header-menu {
   color: lightgray;
 }
 
-header > p {
-  position: absolute;
-  left: 0;
-  right: 0;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-  max-width: fit-content;
-}
-
 header > .header-menu > button {
   all: unset;
   cursor: pointer;
@@ -115,8 +105,22 @@ header > .header-menu:hover > button {
   transform: scale(1.1);
 }
 
+header > .header-menu:hover {
+  padding-right: 3rem;
+}
+
 header > .header-menu:hover .dropdown-content {
   display: flex;
+}
+
+header > p {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  max-width: fit-content;
 }
 
 header > .socials {
