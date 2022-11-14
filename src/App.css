@@ -256,7 +256,7 @@ header > .socials > a:hover {
 .project-content > .description > a {
   all: unset;
   min-width: max-content;
-  min-height: max-content;
+  min-height: fit-content;
   display: flex;
   gap: 0.5rem;
   justify-content: center;
@@ -267,7 +267,8 @@ header > .socials > a:hover {
   border-radius: 10px;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
-  padding-top: 0.2rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
   font-size: calc(8px + 1vh)
 }
 
@@ -314,6 +315,6 @@ header > .socials > a:hover {
   }
   .project-content > .description {
     width: 100vw;
-    min-height: 60vh;
+    height: fit-content;
   }
 }
