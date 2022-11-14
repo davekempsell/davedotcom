@@ -11,6 +11,19 @@ export function Header() {
           <button>
             <FontAwesomeIcon icon={faBars} />
           </button>
+          <div className="dropdown-content">
+            <div className="links">
+              <a href="/">
+                Home
+              </a>
+              <button>
+                Projects
+              </button>
+              <button>
+                About
+              </button>
+            </div>
+          </div>
         </div>
         <p>Dave Kempsell</p>
         <div className="socials">
