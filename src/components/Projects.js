@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useSwipeable } from 'react-swipeable'
+
 import { LexiconProject } from "./Projects/LexiconProject";
 import { GmsProject } from "./Projects/GmsProject";
 import { LoyalBeanProject } from './Projects/LoyalBeanProject'
@@ -36,3 +37,5 @@ export function Projects() {
     </div>
   );
 }
+
+export default Projects

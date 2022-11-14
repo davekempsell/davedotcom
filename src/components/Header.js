@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'
+
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope, faBars } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -5,6 +7,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import '../App.css';
 
 export function Header() {
+
   return (
       <header className="header">
         <div className="header-menu">
@@ -13,15 +16,9 @@ export function Header() {
           </button>
           <div className="dropdown-content">
             <div className="links">
-              <a href="/">
-                Home
-              </a>
-              <button>
-                Projects
-              </button>
-              <button>
-                About
-              </button>
+              <Link to="/">Home</Link>
+              <Link to="/projects">Projects</Link>
+              <Link to="/about">About</Link>
             </div>
           </div>
         </div>
