@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { ProjectTitle } from "./ProjectTitle";
 import { ProjectDots } from "./ProjectDots";
 
-export function LoyalBeanProject (activeIndex, updateIndex, children) {
+export function LoyalBeanProject (activeIndex, updateIndex, projects) {
 
   return (
     <div className="project-container">
@@ -13,7 +13,7 @@ export function LoyalBeanProject (activeIndex, updateIndex, children) {
           <div className="project-image" style={{ backgroundImage: `url(/images/samsung-bean1.png)`}}></div>
           <div className="project-image" style={{ backgroundImage: `url(/images/iphone-bean.png)`}}></div>
         </div>
-        {ProjectDots(activeIndex, children)}
+        {ProjectDots(activeIndex, projects)}
         <div className='description'>
           <div className="project-description">
             <p>Loyal Bean was made during the final group project on the Makers Academy bootcamp.</p>
@@ -30,5 +30,3 @@ export function LoyalBeanProject (activeIndex, updateIndex, children) {
     </div>
   )
 }
-
-export default LoyalBeanProject

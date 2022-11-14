@@ -1,16 +1,16 @@
 import { ProjectDots } from "./ProjectDots"
 import { ProjectTitle } from "./ProjectTitle"
 
-export function LexiconProject(activeIndex, updateIndex, children) {
+export function LexiconProject(activeIndex, updateIndex, projects) {
 
   return (
     <div className="project-container">
       {ProjectTitle('LEXICON', activeIndex, updateIndex)}
       <div className="project-content">
         <div className='images'>
-        <div className="project-image" style={{ backgroundImage: `url(/images/lexicon-hardmode.gif)`}}></div>
+        <div className="project-image" style={{ backgroundImage: `url(/images/lexicon-with-border.gif)`}}></div>
         </div>
-        {ProjectDots(activeIndex, children)}
+        {ProjectDots(activeIndex, projects)}
         <div className='description'>
           <div className="project-description">
             <p>Lexicon was built in October 2022 as an independent project to develop a single page React app. It is based on the popular New York Times word game, Wordle.</p>
@@ -26,5 +26,3 @@ export function LexiconProject(activeIndex, updateIndex, children) {
     </div>
   )
 }
-
-export default LexiconProject

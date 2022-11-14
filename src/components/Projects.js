@@ -7,12 +7,12 @@ import { TastebookProject } from './Projects/TastebookProject'
 
 export function Projects() {
   const [activeIndex, setActiveIndex] = useState(0);
-  let children = ['lexicon', 'loyal bean', 'gms calculator', 'tastebook']
+  let projects = ['lexicon', 'loyal bean', 'gms calculator', 'tastebook']
 
   const updateIndex = (newIndex) => {
     if (newIndex < 0) {
-      newIndex = children.length - 1;
-    } else if (newIndex >= children.length) {
+      newIndex = projects.length - 1;
+    } else if (newIndex >= projects.length) {
       newIndex = 0;
     }
 
@@ -28,10 +28,10 @@ export function Projects() {
   return (
     <div {...handlers} className="carousel">
       <div className="carousel-inner" style={{ transform: `translateX(-${activeIndex * 100}%)` }}>
-        {LexiconProject(activeIndex, updateIndex, children)}
-        {LoyalBeanProject(activeIndex, updateIndex, children)}
-        {GmsProject(activeIndex, updateIndex, children)}
-        {TastebookProject(activeIndex, updateIndex, children)}
+        {LexiconProject(activeIndex, updateIndex, projects)}
+        {LoyalBeanProject(activeIndex, updateIndex, projects)}
+        {GmsProject(activeIndex, updateIndex, projects)}
+        {TastebookProject(activeIndex, updateIndex, projects)}
       </div>
     </div>
   );

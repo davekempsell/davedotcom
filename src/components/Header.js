@@ -4,9 +4,9 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import '../App.css';
 
-function Header() {
+export function Header() {
   return (
-      <header className="App-header">
+      <header className="header">
         <div className="header-menu">
           <button>
             <FontAwesomeIcon icon={faBars} />
@@ -27,5 +27,3 @@ function Header() {
       </header>
   );
 }
-
-export default Header;

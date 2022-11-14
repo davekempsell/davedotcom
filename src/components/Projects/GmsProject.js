@@ -1,7 +1,7 @@
 import { ProjectTitle } from "./ProjectTitle";
 import { ProjectDots } from "./ProjectDots";
 
-export function GmsProject(activeIndex, updateIndex, children) {
+export function GmsProject(activeIndex, updateIndex, projects) {
 
   return (
     <div className="project-container">
@@ -10,7 +10,7 @@ export function GmsProject(activeIndex, updateIndex, children) {
         <div className='images'>
         <div className="project-image" style={{ backgroundImage: `url(/images/gms-calculator.png)`}}></div>
         </div>
-        {ProjectDots(activeIndex, children)}
+        {ProjectDots(activeIndex, projects)}
         <div className='description'>
           <div className="project-description">
             <p>GMS stands for 'Gold Medal Speed', a measurement used in rowing to compare different types of boats across varying distances. The app was built to make it easy to calculate this when coaching rowing sessions.</p>
@@ -26,5 +26,3 @@ export function GmsProject(activeIndex, updateIndex, children) {
     </div>
   )
 }
-
-export default GmsProject

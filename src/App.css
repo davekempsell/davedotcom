@@ -1,5 +1,7 @@
 .app {
   align-items: center;
+  /* display: flex;
+  flex-direction: column; */
 }
 
 * {
@@ -20,7 +22,6 @@ header {
   background-color: var(--header-background-color);
   height: 10vh;
   width: 100vw;
-  min-width: 250px;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -36,6 +37,16 @@ header > .header-menu {
   align-items: center;
   justify-content: center;
   margin-left: 1rem;
+}
+
+header > p {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  max-width: fit-content;
 }
 
 header > .header-menu > button {
@@ -98,6 +109,11 @@ header > .socials > a:hover {
   gap: 1rem;
 }
 
+.project-container > .title > h3 {
+  color: var(--header-background-color);
+  font-weight: bold;
+}
+
 .project-container > .title > .nav-button {
   all: unset;
   height: 100%;
@@ -105,10 +121,12 @@ header > .socials > a:hover {
   background-color: white;
   padding-left: 1rem;
   padding-right: 1rem;
+  transition: all 0.2s ease-out;
 }
 
 .project-container > .title > .nav-button:hover {
   cursor: pointer;
+  transform: scale(1.2);
 }
 
 .project-content {
@@ -156,7 +174,7 @@ header > .socials > a:hover {
   padding: 1rem;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
 }
 
@@ -165,16 +183,26 @@ header > .socials > a:hover {
   flex-direction: column;
   white-space: initial;
   overflow: scroll;
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 
 .project-content > .description > a {
   all: unset;
   min-width: max-content;
+  min-height: max-content;
   display: flex;
   gap: 0.5rem;
   justify-content: center;
   text-decoration: none;
-  margin-top: 10px;
+  margin-top:20px;
+  background-color: var(--header-background-color);
+  color: white;
+  border-radius: 10px;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  padding-top: 0.2rem;
+  font-size: calc(8px + 1vh)
 }
 
 .project-content > .description > a:hover {
@@ -183,11 +211,11 @@ header > .socials > a:hover {
 }
 
 .project-content > .description > a > img {
-  height: 50px;
+  height: 40px;
 }
 
 .project-content > .description > a > #github {
-  height: 50px;
+  height: 40px;
 }
 
 .project-content > .description > a > p {
@@ -195,6 +223,10 @@ header > .socials > a:hover {
 }
 
 @media (max-width: 480px) {
+  header > .socials {
+    gap: 1rem;
+  }
+
   .dots-container {
     display: flex;
   }
