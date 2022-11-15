@@ -22,32 +22,10 @@ h1, h2, h3, h4, h5, h6, a, p, span, li {
 }
 
 .main-content-container {
-  border: solid 1px green;
   width: 100vw;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-}
-
-.introduction-container {
-  border: solid 1px red;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  height: fit-content;
-  gap: 1rem;
-  padding: 1rem;
-}
-
-.introduction-container > img {
-  height: 100px;
-  width: 100px;
-}
-
-.introduction-container > .introduction-text {
-  text-align: center;
-  padding: 1rem;
-  border: solid 1px purple;
 }
 
 /* Styling for navigation bar */
@@ -74,6 +52,78 @@ h1, h2, h3, h4, h5, h6, a, p, span, li {
   font-size: x-large;
 }
 
+/* Styling for introduction section */
+
+.introduction-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: fit-content;
+  gap: 1rem;
+  padding-bottom: 3rem;
+}
+
+.introduction-container > img {
+  height: 100px;
+  width: 100px;
+  margin-bottom: 75px;
+  border-radius: 50px;
+  background-color: rgba(14, 47, 125, 0.689);
+}
+
+.introduction-container > .introduction-text {
+  text-align: center;
+  padding: 3rem;
+}
+
+.introduction-text > p {
+  font-size: 18px;
+}
+
+/* Stlying for more info section */
+.more-info-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  align-items: center;
+}
+
+#devices-image {
+  max-width: 80vw;
+  transform: translateY(4%)
+}
+
+.more-info-content {
+  background-color: rgba(14, 47, 125, 0.689);
+  width: 100%;
+  height: fit-content;
+  color: white;
+}
+
+.more-info-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  text-align: center;
+  width: 100%;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  gap: 1rem;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.5em;
+}
+
+.more-info-text > p {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+/* Styling changes for when screen is wider than 480px (desktop view) */
+
 @media (min-width: 480px) {
   .home-container {
     flex-direction: row;
@@ -87,23 +137,28 @@ h1, h2, h3, h4, h5, h6, a, p, span, li {
     padding: 1rem;
     width: 20vw;
     height: 100vh;
-    border-right: solid 1px rgb(0,0,0,0.1)
   }
 
   .main-content-container {
     width: 70vw;
+    border-left: solid 1px rgb(0,0,0,0.1);
+    border-right: solid 1px rgb(0,0,0,0.1);
     overflow: scroll;
   }
 
   .introduction-container > img {
     height: 150px;
     width: 150px;
+    border-radius: 75px;
   }
 
   .filler-container {
     display: flex;
     width: 10vw;
     height: 100vh;
-    border-left: solid 1px rgb(0,0,0,0.1);
+  }
+
+  .more-info-container {
+    display: none;
   }
 }
