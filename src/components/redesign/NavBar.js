@@ -4,8 +4,8 @@ import '../../NewApp.css'
 
 export function NavBar() {
   return (
-    <div className="nav-wrapper">
-      <img src='/images/favicon.ico' />
+    <div className="nav-container">
+      <img src='/images/favicon.ico' alt="glasses logo"></img>
       <div className="navicon">
         <FontAwesomeIcon id="navicon" icon={faNavicon} />
       </div>
