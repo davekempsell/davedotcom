@@ -1,8 +1,3 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faMugHot, faArrowPointer, faFileCode as faSolidFile } from "@fortawesome/free-solid-svg-icons"; 
-import { faFileCode } from "@fortawesome/free-regular-svg-icons";
-import { faReact, faNode } from "@fortawesome/free-brands-svg-icons";
-
 function MoreInfo() {
   return (
     <div className="more-info-container">

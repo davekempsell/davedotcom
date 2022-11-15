@@ -138,26 +138,49 @@ h1, h2, h3, h4, h5, h6, a, p, span, li {
   align-items: center;
 }
 
-.frontend-experience {
+.experience-card {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
   text-align: center;
   width: 80%;
-  height: 40vh;
+  min-height: fit-content;
   border: solid 1px var(--border-color);
-  border-radius: 4px;
   background-color: white;
   transform: translateY(-5%);
 }
 
-.frontend-icon {
+#frontend-card {
+  border-radius: 4px 4px 0px 0px;
+}
+
+#backend-card {
+  border-radius: 0px 0px 4px 4px;
+}
+
+.experience-icon {
   background-color: var(--secondary-color);
   color: white;
   padding: 1rem;
   border-radius: 50%;
-  margin-top: 1rem;
+  margin-top: 2rem;
+}
+
+.experience-text {
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+
+.languages-container {
+  font-size: 0.9rem;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  margin-bottom: 2rem;
+}
+
+.languages-container > h3 {
+  color: var(--primary-color);
 }
 
 /* Styling changes for when screen is wider than 480px (desktop view) */
@@ -175,13 +198,17 @@ h1, h2, h3, h4, h5, h6, a, p, span, li {
     padding: 1rem;
     width: 20vw;
     height: 100vh;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    border-right: solid 1px var(--border-color);
   }
 
   .main-content-container {
     width: 70vw;
-    border-left: solid 1px var(--border-color);
-    border-right: solid 1px var(--border-color);
     overflow: scroll;
+    margin-left: 20vw;
   }
 
   .introduction-container > img {
@@ -190,13 +217,37 @@ h1, h2, h3, h4, h5, h6, a, p, span, li {
     border-radius: 75px;
   }
 
+  .devices-image {
+    max-width: 500px;
+  }
+
+  .experience-container {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .experience-card {
+    width: 300px;
+    height: 480px;
+  }
+
+  #frontend-card {
+    border-radius: 4px 0px 0px 4px;
+    border-right: none;
+  }
+
+  #backend-card {
+    border-radius: 0px 4px 4px 0px;
+  }
+
   .filler-container {
     display: flex;
     width: 10vw;
     height: 100vh;
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    border-left: solid 1px var(--border-color);
   }
-
-  /* .more-info-container {
-    display: none;
-  } */
 }
