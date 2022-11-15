@@ -183,6 +183,39 @@ h1, h2, h3, h4, h5, h6, a, p, span, li {
   color: var(--primary-color);
 }
 
+/* Styling for projects */
+
+.projects-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 2rem;
+}
+
+.projects-text {
+  text-align: center;
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+
+.project-cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+  width: 250px;
+  border-radius: 10px;
+  background-color: var(--primary-color);
+}
+
 /* Styling changes for when screen is wider than 480px (desktop view) */
 
 @media (min-width: 480px) {
