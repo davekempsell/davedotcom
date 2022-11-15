@@ -1,0 +1,54 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --background: rgb(40, 44, 52);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Roboto", sans-serif;
+}
+
+a, p, span, li {
+  font-family: "Helvetica", sans-serif;
+}
+
+/* Styling for home page */
+
+/* Styling for navigation bar */
+.nav-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-wrapper > img {
+  height: 50px;
+  width: 50px;
+  padding: 0.5rem;
+}
+
+.nav-wrapper > .navicon {
+  height: 50px;
+  width: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  font-size: x-large;
+}
+
+@media (min-width: 480px) {
+  .nav-wrapper {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+    gap: 1rem;
+    padding: 1rem;
+    width: 200px;
+    height: 100vh;
+    border-right: solid 1px rgb(0,0,0,0.1)
+  }
+}
