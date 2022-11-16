@@ -1,7 +1,7 @@
 function MoreInfo() {
   return (
     <div className="more-info-container">
-      <div className="devices-image" style={{ backgroundImage: `url(/images/devices-dk.png)`}}>
+      <div className="devices-image" style={{ backgroundImage: `url(/images/devices2.png)`}}>
       </div>
       <div className="more-info-content">
         <div className="more-info-text">
