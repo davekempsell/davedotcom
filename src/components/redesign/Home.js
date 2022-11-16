@@ -15,7 +15,7 @@ export function Home() {
         {Experience()}
         <div className="projects-container">
           <div className="projects-text">
-            <h3>Recent Projects</h3>
+            <h3>Projects</h3>
             <p>Here are some of the projects I've been working on recently:</p>
           </div>
           <div className="project-cards-container">
