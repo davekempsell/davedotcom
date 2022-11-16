@@ -35,6 +35,7 @@ h1, h2, h3, h4, h5, h6, a, p, span, li {
 .nav-container {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
 }
@@ -46,6 +47,7 @@ h1, h2, h3, h4, h5, h6, a, p, span, li {
 }
 
 .nav-container > .navicon {
+  all: unset;
   height: 50px;
   width: 50px;
   display: flex;
@@ -53,6 +55,44 @@ h1, h2, h3, h4, h5, h6, a, p, span, li {
   justify-content: center;
   text-align: center;
   font-size: x-large;
+}
+
+.nav-container > .navicons {
+  display: none;
+  width: 50px;
+  height: fit-content;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  gap: 2rem;
+}
+
+.nav-container > .mobile {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: center;
+  border-top: solid 1px var(--border-color);
+  border-bottom: solid 1px var(--border-color);
+  
+}
+
+.nav-container > .navicon:hover {
+  color: var(--primary-color)
+}
+
+
+.nav-container > .navicons > a {
+  text-decoration: none;
+  color: black;
+  font-size: xx-large;
+}
+
+.nav-container > .navicons > a:hover {
+  transform: scale(1.1);
+  color: var(--primary-color)
 }
 
 /* Styling for introduction section */
@@ -64,20 +104,23 @@ h1, h2, h3, h4, h5, h6, a, p, span, li {
   width: 100%;
   height: fit-content;
   gap: 1rem;
-  padding-bottom: 3rem;
+  padding-bottom: 2rem;
 }
 
 .introduction-container > img {
-  height: 100px;
-  width: 100px;
-  margin-bottom: 75px;
+  height: 150px;
+  width: 150px;
+  margin-bottom: 3rem;
   border-radius: 50%;
   background-color: var(--primary-color)
 }
 
 .introduction-container > .introduction-text {
   text-align: center;
-  padding: 3rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  padding-left: 3rem;
+  padding-right: 3rem;
   color: var(--secondary-color)
 }
 
@@ -134,7 +177,8 @@ h1, h2, h3, h4, h5, h6, a, p, span, li {
 /* Styling for experience section */
 .experience-container {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
   align-items: center;
   gap: 1rem;
 }
@@ -145,8 +189,9 @@ h1, h2, h3, h4, h5, h6, a, p, span, li {
   justify-content: flex-start;
   align-items: center;
   text-align: center;
-  width: 80%;
-  min-height: fit-content;
+  min-width: 256px;
+  max-width: 300px;
+  height: 480px;
   border: solid 1px var(--border-color);
   border-radius: 5px;
   background-color: white;
@@ -197,6 +242,8 @@ h1, h2, h3, h4, h5, h6, a, p, span, li {
   flex-wrap: wrap;
   justify-content: center;
   gap: 1rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 
 .project-card {
@@ -334,35 +381,31 @@ h1, h2, h3, h4, h5, h6, a, p, span, li {
     border-right: solid 1px var(--border-color);
   }
 
-  .main-content-container {
-    width: 70vw;
-    overflow: scroll;
-    margin-left: 20vw;
+  .nav-container > .navicon {
+    display: none;
   }
 
-  .introduction-container > img {
-    height: 150px;
-    width: 150px;
-    border-radius: 75px;
+  .nav-container > .desktop {
+    display: flex;
+  }
+
+  .nav-container > .mobile {
+    display: none;
+  }
+
+  .main-content-container {
+    width: 65vw;
+    overflow: scroll;
+    margin-left: 20vw;
   }
 
   .devices-image {
     max-width: 500px;
   }
 
-  .experience-container {
-    flex-direction: row;
-    justify-content: center;
-  }
-
-  .experience-card {
-    width: 300px;
-    height: 480px;
-  }
-
   .filler-container {
     display: flex;
-    width: 10vw;
+    width: 15vw;
     height: 100vh;
     position: fixed;
     top: 0px;
