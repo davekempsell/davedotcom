@@ -1,4 +1,3 @@
-import '../../NewApp.css'
 import Filler from './Filler';
 import NavBar from './NavBar';
 import Introduction from './Introduction';
