@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 import './App.css';
 import Home from './components/Home'
+import Lexicon from './components/Lexicon/Lexicon';
 
 function App() {
 
@@ -11,8 +12,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />
-          {/* <Route path="/projects" element={<Projects />} />  
-          <Route path="/about" element={<About />} /> */}
+          <Route path="/lexicon" element={<Lexicon />} />  
         </Routes> 
       </BrowserRouter>
     </div>

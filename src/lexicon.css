@@ -1,0 +1,474 @@
+html,
+body {
+  background: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+:root {
+  --wrong: #3a3a3c;
+  --close: #b59f3b;
+  --correct: #538d4e;
+}
+
+.main-container {
+  display: flex;
+  flex: none;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+}
+
+.title-container {
+  display: flex;
+  flex-direction: row;
+  height: 50px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.title {
+  align-self: center;
+  font-size: x-large;
+  font-weight: bold;
+}
+
+.logo {
+  align-self: center;
+  height: 40px;
+  
+}
+
+.grid {
+  display: flex;
+  flex-direction: row;
+  gap: 2px;
+  margin: 2px;
+}
+
+.box-empty {
+  width: 50px;
+  height: 50px;
+  border: 2px solid;
+  border-color: rgb(164, 164, 164);
+  display: grid;
+  place-items: center;
+  font-size: 2.4rem;
+  text-transform: uppercase;
+  color: black
+}
+
+@keyframes wrongBox {
+  from {background-color: white;}
+  to {background-color: var(--wrong);}
+}
+
+@keyframes closeBox {
+  from {background-color: white;}
+  to {background-color: var(--close);}
+}
+
+@keyframes correctBox {
+  from {background-color: white;}
+  to {background-color: var(--correct);}
+}
+
+.box-wrong {
+  width: 50px;
+  height: 50px;
+  border: 2px solid;
+  border-color: rgb(164, 164, 164);
+  display: grid;
+  place-items: center;
+  font-size: 2.4rem;
+  text-transform: uppercase;
+  background-color: var(--wrong);
+  color: white;
+  animation-name: wrongBox;
+  animation-duration: 4s;
+}
+
+.box-close {
+  width: 50px;
+  height: 50px;
+  border: 2px solid;
+  border-color: rgb(164, 164, 164);
+  display: grid;
+  place-items: center;
+  font-size: 2.4rem;
+  text-transform: uppercase;
+  background-color: var(--close);
+  color: white;
+  animation-name: closeBox;
+  animation-duration: 4s;
+}
+
+.box-correct {
+  width: 50px;
+  height: 50px;
+  border: 2px solid;
+  border-color: rgb(164, 164, 164);
+  display: grid;
+  place-items: center;
+  font-size: 2.4rem;
+  text-transform: uppercase;
+  background-color: var(--correct);
+  color: white;
+  animation-name: correctBox;
+  animation-duration: 4s;
+}
+
+.keyboard-container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 480px;
+  overflow:hidden;
+}
+
+.keyboard-top {
+  margin-top: 20px;
+  display: inline-grid;
+  grid-template-columns: repeat(10, auto);
+  gap: 6px;
+  margin-bottom: 4px;
+  width: 100%;
+  
+}
+.keyboard-middle {
+  margin: 4px;
+  display: inline-grid;
+  grid-template-columns: repeat(9, auto);
+  gap: 6px;
+  width: 90%;
+}
+.keyboard-bottom {
+  margin-bottom: 20px;
+  display: inline-grid;
+  grid-template-columns: repeat(9, auto);
+  gap: 6px;
+  margin-top: 4px;
+  width: 100%;
+}
+
+.typed-input {
+  margin: 20px;
+}
+
+@keyframes wrongLetter {
+  from {background-color: lightgray;}
+  to {background-color: var(--wrong);}
+}
+
+@keyframes closeLetter {
+  from {background-color: lightgray;}
+  to {background-color: var(--close);}
+}
+
+@keyframes correctLetter {
+  from {background-color: lightgray;}
+  to {background-color: var(--correct);}
+}
+
+@keyframes textChange {
+  from {color: black;}
+  to {color: white}
+}
+
+.key-standard {
+  width: 100%;
+  height: 42px;
+  font-size: medium;
+  border-radius: 3px;
+  padding: 0px;
+  border-color: lightgray;
+  background-color: lightgray;
+  text-transform: uppercase;
+  color: black;
+  font-weight:bold;
+}
+
+.key-wrong {
+  width: 100%;
+  height: 42px;
+  font-size: medium;
+  border-radius: 3px;
+  padding: 0px;
+  border-color: var(--wrong);
+  background-color: var(--wrong);
+  text-transform: uppercase;
+  color: white;
+  font-weight:bold;
+  animation: wrongLetter 2s, textChange 2s;
+}
+
+.key-close {
+  width: 100%;
+  height: 42px;
+  font-size: medium;
+  border-radius: 3px;
+  padding: 0px;
+  border-color: var(--close);
+  background-color: var(--close);
+  text-transform: uppercase;
+  color: white;
+  font-weight: bold;
+  animation: closeLetter 2s, textChange 2s;
+}
+
+.key-correct {
+  width: 100%;
+  height: 42px;
+  font-size: medium;
+  border-radius: 3px;
+  padding: 0px;
+  border-color: var(--correct);
+  background-color: var(--correct);
+  text-transform: uppercase;
+  color: white;
+  font-weight: bold;
+  animation: correctLetter 2s, textChange 2s;
+}
+
+.key-action {
+  width: 100%;
+  height: 42px;
+  font-size: medium;
+  border-radius: 3px;
+  padding: 1px;
+  border-color: lightgray;
+  background-color: lightgray;
+  text-transform: uppercase;
+  color: black;
+  font-weight: bold;
+}
+
+.footer {
+  text-align: center;
+}
+
+@keyframes fade-in {
+  0%{opacity: 0}
+  100%{opacity: 1}
+}
+
+.popup {
+  position: absolute;
+  margin-top: 80px;
+  z-index: 1;
+  border-color: black;
+  border-radius: 20px;
+  background-color: white;
+  border-color: black;
+  border-style: solid;
+  width: 350px;
+  height: 470px;
+  animation-name: fade-in;
+  animation-duration: 3s;
+}
+
+.popup-content {
+  position: relative;
+  text-align: center;
+  padding: 10px;
+}
+
+.popup-close {
+  position: absolute;
+  z-index: 1;
+  margin: 10px;
+  top: 0;
+  right: 0;
+  font-weight: bold;
+  background-color: #ededed;
+  border-radius: 5px; 
+}
+
+.popup-winner {
+  font-size: large;
+}
+
+.popup-loser {
+  font-size: large;
+}
+
+.popup-jobstuff {
+  position: relative;
+  margin-top: 50px;
+  font-style: italic;
+  font-size: medium;
+}
+
+.rules-popup {
+  position: absolute;
+  margin-top: 60px;
+  height: 30px;
+  width: 160px;
+  background-color: rgb(51, 51, 51);
+  border-radius: 10px;
+  line-height: 30px;
+  text-align: center;
+  color: white;
+  font-size: small;
+  font-weight: bold;
+  animation: fade-in 1s
+}
+
+.switch {
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding: 10px;
+}
+
+.hardmode {
+  position: absolute;
+  left: 0;
+  top: 0;
+  line-height: 1px;
+  margin-top: 30px;
+  margin-left: 16px;
+  padding: 0px;
+  font-size: small;
+  font-weight: bold;
+}
+
+.info {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.info-popup {
+  position: absolute;
+  margin-top: 80px;
+  z-index: 1;
+  border-color: black;
+  border-radius: 20px;
+  background-color: white;
+  border-color: black;
+  border-style: solid;
+  width: 350px;
+  height: 500px;
+  animation-name: fade-in;
+  animation-duration: 3s;
+}
+
+.info-button {
+  margin: 10px;
+  font-size: large;
+  font-weight: bold;
+  border-style: solid;
+  border-color: black;
+  color: black;
+  border-radius: 15px;
+  background-color: white;
+}
+
+.info-box {
+  padding: 5px;
+}
+
+.how-to-play {
+  font-size: x-large;
+  font-weight: bold;
+}
+
+.instructions {
+  text-align: left;
+  font-size: medium;
+}
+
+.info-popup-jobstuff {
+  position: absolute;
+  text-align: center;
+  bottom: 5px;
+  width: 330px;
+  left: 10px;
+  font-style: italic;
+  font-size: small;
+}
+
+.examples {
+  margin-top: 5px;
+  font-size:small;
+  font-weight: bold;
+  text-align: left;
+  padding: 0px;
+
+}
+
+.example-box-empty {
+  width: 20px;
+  height: 20px;
+  border: 2px solid;
+  border-color: rgb(164, 164, 164);
+  display: grid;
+  place-items: center;
+  font-size: small;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: black
+}
+
+.example-box-correct {
+  width: 20px;
+  height: 20px;
+  border: 2px solid;
+  border-color: rgb(164, 164, 164);
+  display: grid;
+  place-items: center;
+  font-size: small;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: white;
+  background-color: var(--correct);
+  animation-name: correctBox;
+  animation-duration: 6s;
+}
+
+.example-box-close {
+  width: 20px;
+  height: 20px;
+  border: 2px solid;
+  border-color: rgb(164, 164, 164);
+  display: grid;
+  place-items: center;
+  font-size: small;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: white;
+  background-color: var(--close);
+  animation-name: closeBox;
+  animation-duration: 6s;
+}
+
+.example-box-wrong {
+  width: 20px;
+  height: 20px;
+  border: 2px solid;
+  border-color: rgb(164, 164, 164);
+  display: grid;
+  place-items: center;
+  font-size: small;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: white;
+  background-color: var(--wrong);
+  animation-name: wrongBox;
+  animation-duration: 6s;
+}
+
+.grid-description {
+  display: flex;
+  justify-content: flex-start;
+  font-size: x-small;
+  gap: 10px;
+}
+
+.hardmode-instructions {
+  font-size: small;
+  font-weight: bold;
+  margin-top: 10px;
+}

@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'
+
 export function Projects() {
   return (
     <div className="projects-container">
@@ -12,9 +14,7 @@ export function Projects() {
             <div className="project-hover-content">
               <h2>LEXICON</h2>
               <p>Lexicon is a single page React app, based on Wordle. It was built to create an 'extra-hard' mode, for a more challenging playing experience.</p>
-              <a id="lexicon-button" href="https://lexicon-by-dave.herokuapp.com/" target="_blank" rel="noreferrer">
-                Play Lexicon!
-              </a>
+              <Link id="lexicon-button" to={'/lexicon'}>Play Lexicon!</Link>
             </div>
           </div>
         </div>
