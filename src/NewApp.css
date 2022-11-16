@@ -25,6 +25,7 @@ h1, h2, h3, h4, h5, h6, a, p, span, li {
 }
 
 .main-content-container {
+  margin-top: 10vh;
   width: 100vw;
   display: flex;
   flex-direction: column;
@@ -33,17 +34,22 @@ h1, h2, h3, h4, h5, h6, a, p, span, li {
 
 /* Styling for navigation bar */
 .nav-container {
+  position: fixed;
+  background-color: white;
+  width: 100%;
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
+  z-index: 2;
 }
 
 .nav-container > img {
   height: 50px;
   width: 50px;
-  padding: 0.5rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 1rem;
 }
 
 .nav-container > .navicon {
@@ -67,16 +73,14 @@ h1, h2, h3, h4, h5, h6, a, p, span, li {
   padding-top: 1rem;
   padding-bottom: 1rem;
   gap: 2rem;
+  width: fit-content;
 }
 
 .nav-container > .mobile {
   display: flex;
   flex-direction: row;
-  width: 100%;
   justify-content: center;
-  border-top: solid 1px var(--border-color);
-  border-bottom: solid 1px var(--border-color);
-  
+  padding-right: 1rem;
 }
 
 .nav-container > .navicon:hover {
@@ -162,7 +166,7 @@ h1, h2, h3, h4, h5, h6, a, p, span, li {
   text-align: center;
   width: 100%;
   padding-top: 2rem;
-  padding-bottom: 2rem;
+  padding-bottom: 6rem;
   gap: 1rem;
   font-weight: 500;
   font-size: 18px;
@@ -195,7 +199,7 @@ h1, h2, h3, h4, h5, h6, a, p, span, li {
   border: solid 1px var(--border-color);
   border-radius: 5px;
   background-color: white;
-  transform: translateY(-5%);
+  transform: translateY(-12%);
 }
 
 .experience-icon {
@@ -235,6 +239,7 @@ h1, h2, h3, h4, h5, h6, a, p, span, li {
   text-align: center;
   padding-left: 3rem;
   padding-right: 3rem;
+  padding-bottom: 2rem;
 }
 
 .project-cards-container {
@@ -252,7 +257,7 @@ h1, h2, h3, h4, h5, h6, a, p, span, li {
   justify-content: flex-end;
   align-items: center;
   height: 400px;
-  width: 250px;
+  width: 256px;
   border: solid 1px var(--border-color);
   border-radius: 10px;
   background-size: cover;
@@ -397,6 +402,7 @@ h1, h2, h3, h4, h5, h6, a, p, span, li {
     width: 65vw;
     overflow: scroll;
     margin-left: 20vw;
+    margin-top: 0;
   }
 
   .devices-image {
