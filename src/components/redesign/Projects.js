@@ -13,7 +13,7 @@ export function Projects() {
               <h2>LEXICON</h2>
               <p>Lexicon is a single page React app, based on Wordle. It was built to create an 'extra-hard' mode, for a more challenging playing experience.</p>
               <a id="lexicon-button" href="https://lexicon-by-dave.herokuapp.com/" target="_blank" rel="noreferrer">
-                Visit Website
+                Play Lexicon!
               </a>
             </div>
           </div>
@@ -25,7 +25,7 @@ export function Projects() {
               <h2>GMS CALCULATOR</h2>
               <p>GMS stands for 'Gold Medal Speed'. The calculator allows rowing coaches to compare the speeds of different boats across varying distances.</p>
               <a id="gms-button" href="https://gms-calculator.herokuapp.com/" target="_blank" rel="noreferrer">
-                Visit Website
+                Use calculator
               </a>
             </div>
           </div>
