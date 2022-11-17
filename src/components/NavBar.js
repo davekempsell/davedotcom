@@ -1,6 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEnvelope, faFilePdf } from "@fortawesome/free-solid-svg-icons";
+import { faEnvelope, faFilePdf, faHouse } from "@fortawesome/free-solid-svg-icons";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import { Link } from 'react-router-dom'
 
 export function NavBar() {
   const navicons = view => {
@@ -26,7 +27,10 @@ export function NavBar() {
   return (
     <div>
       <div className="nav-container">
-        <img src='/images/favicon.ico' alt="glasses logo"></img>
+        {/* <img src='/images/favicon.ico' alt="glasses logo"></img> */}
+        <Link id="home" to={'/'}>
+          <FontAwesomeIcon icon={faHouse} />
+        </Link>
         {navicons('mobile')}
         {navicons('desktop')}
       </div>
