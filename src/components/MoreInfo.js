@@ -5,7 +5,7 @@ function MoreInfo() {
       </div>
       <div className="more-info-content">
         <div className="more-info-text">
-          <p>Some stuff about my career and journey, etc etc. Ideally this will be a couple of sentences.</p>
+          <p>I started my journey in software development in early 2022 after working within performance sport for over a decade. </p>
           <p>List out some reasons why I'd be a great person to hire, but keep it kind of humble brag style.</p>
           <p>And finally something else to finish off this section.</p>
         </div>

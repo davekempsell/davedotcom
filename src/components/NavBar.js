@@ -2,8 +2,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope, faFilePdf } from "@fortawesome/free-solid-svg-icons";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
-import Pdf from './DJK-CV.pdf'
-
 export function NavBar() {
   const navicons = view => {
     return (
@@ -17,7 +15,7 @@ export function NavBar() {
         <a href="mailto: davekempsell87@gmail.com" target="_blank" rel="noreferrer">
           <FontAwesomeIcon icon={faEnvelope} />
         </a>
-        <a href={Pdf} target="_blank" rel="noreferrer">
+        <a href='/docs/DJK-CV.pdf' target="_blank" rel="noreferrer">
           <FontAwesomeIcon icon={faFilePdf} />
         </a>
       </div>
