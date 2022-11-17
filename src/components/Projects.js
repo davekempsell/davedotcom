@@ -24,9 +24,7 @@ export function Projects() {
             <div className="project-hover-content">
               <h2>GMS CALCULATOR</h2>
               <p>GMS stands for 'Gold Medal Speed'. The calculator allows rowing coaches to compare the speeds of different boats across varying distances.</p>
-              <a id="gms-button" href="https://gms-calculator.herokuapp.com/" target="_blank" rel="noreferrer">
-                Use calculator
-              </a>
+              <Link id="gms-button" to={'/calculator'}>Use calculator</Link>
             </div>
           </div>
         </div>

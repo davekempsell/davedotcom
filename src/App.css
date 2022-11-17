@@ -52,26 +52,30 @@ h1, h2, h3, h4, h5, h6, a, p, span, li {
   padding-left: 1rem;
 }
 
-.nav-container > #home {
-  all: unset;
-  height: 50px;
-  width: 50px;
-  display: flex;
+.nav-container > .home-icon {
+  height: fit-content;
   flex-direction: column;
   justify-content: center;
-  text-align: center;
-  font-size: x-large;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  gap: 2rem;
+  width: fit-content;
 }
 
-.nav-container > .navicon {
+#home {
   all: unset;
-  height: 50px;
-  width: 50px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: center;
-  font-size: x-large;
+  font-size: xx-large;
+  padding-left: 1rem;
+}
+
+#home:hover {
+  color: var(--primary-color);
+  transform: scale(1.1);
+  cursor: pointer;
 }
 
 .nav-container > .navicons {
@@ -92,10 +96,6 @@ h1, h2, h3, h4, h5, h6, a, p, span, li {
   flex-direction: row;
   justify-content: center;
   padding-right: 1rem;
-}
-
-.nav-container > .navicon:hover {
-  color: var(--primary-color)
 }
 
 
@@ -387,7 +387,7 @@ h1, h2, h3, h4, h5, h6, a, p, span, li {
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-end;
-    gap: 1rem;
+    gap: 3rem;
     padding: 2rem;
     width: 20vw;
     height: 100vh;
@@ -398,9 +398,9 @@ h1, h2, h3, h4, h5, h6, a, p, span, li {
     border-right: solid 1px var(--border-color);
   }
 
-  .nav-container > .navicon {
+  /* .nav-container > .navicon {
     display: none;
-  }
+  } */
 
   .nav-container > .desktop {
     display: flex;

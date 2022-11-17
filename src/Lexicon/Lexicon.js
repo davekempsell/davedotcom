@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import '../../lexicon.css'
+import './lexicon.css'
 import Logo from './lexBrickLogo.png'
 import EmptyGrid from './components/emptyGrid';
 import GuessGrid from './components/guessGrid'
@@ -13,8 +13,8 @@ import { InfoPopUp, infoButton } from './components/popups/infoPopUp';
 import { ToggleSwitch } from './components/ToggleSwitch/toggleSwitch';
 import { updateLetters, guessChecker, alreadyGuessed, correctLetterCheck, closeLetterCheck } from './guessCheckers/guessCheckers';
 import { lexiconLogic } from './guessCheckers/lexiconLogic'
-import NavBar from '../NavBar';
-import Filler from '../Filler';
+import NavBar from '../components/NavBar';
+import Filler from '../components/Filler';
 
 function Lexicon() {
   const TargetWord = targetWord
