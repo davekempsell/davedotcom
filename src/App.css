@@ -195,6 +195,8 @@ h1, h2, h3, h4, h5, h6, a, p, span, li {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  padding-left: 2rem;
+  padding-right: 2rem;
   gap: 1rem;
 }
 
@@ -204,8 +206,7 @@ h1, h2, h3, h4, h5, h6, a, p, span, li {
   justify-content: flex-start;
   align-items: center;
   text-align: center;
-  min-width: 256px;
-  max-width: 300px;
+  max-width: 95%;
   height: 480px;
   border: solid 1px var(--border-color);
   border-radius: 5px;
@@ -269,7 +270,7 @@ h1, h2, h3, h4, h5, h6, a, p, span, li {
   justify-content: flex-end;
   align-items: center;
   height: 400px;
-  width: 256px;
+  width: 95%;
   border: solid 1px var(--border-color);
   border-radius: 10px;
   background-size: cover;
@@ -375,6 +376,57 @@ h1, h2, h3, h4, h5, h6, a, p, span, li {
   background-color: rgba(164,118,166,0.9)
 }
 
+/* Styling for footer component in mobile view */
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  height: fit-content;
+  background-color: var(--primary-color);
+}
+
+.footer-container > .contact-icons {
+  display: flex;
+  justify-content: center;
+  color: white;
+  gap: 1rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.footer-container > .contact-icons > a {
+  all: unset;
+  border: solid 3px rgba(255,255,255,0.5);
+  border-radius: 50%;
+  padding: 0.5rem;
+  font-size: large;
+}
+
+.footer-container > .built-by-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  padding-bottom: 1rem;
+  line-height: 0.1;
+}
+
+.footer-container > .built-by-text > .built-in-react {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+#react-icon {
+  font-size: x-large;
+}
 
 /* Styling changes for when screen is wider than 480px (desktop view) */
 
@@ -397,10 +449,6 @@ h1, h2, h3, h4, h5, h6, a, p, span, li {
     bottom: 0px;
     border-right: solid 1px var(--border-color);
   }
-
-  /* .nav-container > .navicon {
-    display: none;
-  } */
 
   .nav-container > .desktop {
     display: flex;
@@ -426,6 +474,15 @@ h1, h2, h3, h4, h5, h6, a, p, span, li {
     padding-right: 4rem;
   }
 
+  .experience-card {
+    max-width: 40%;
+    height: fit-content;
+  }
+
+  .project-card {
+    max-width: 40%;
+  }
+
   .filler-container {
     display: flex;
     width: 15vw;
@@ -435,5 +492,9 @@ h1, h2, h3, h4, h5, h6, a, p, span, li {
     right: 0px;
     bottom: 0px;
     border-left: solid 1px var(--border-color);
+  }
+
+  .footer-container {
+    display: none
   }
 }
