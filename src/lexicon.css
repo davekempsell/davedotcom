@@ -10,24 +10,32 @@ body {
   --correct: #538d4e;
 }
 
-.main-container {
+.lexicon-container {
   display: flex;
-  flex: none;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  width: 100%;
+  width: 100vw;
 }
 
 .title-container {
   display: flex;
   flex-direction: row;
-  height: 50px;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  justify-content: space-between;
+  height: fit-content;
+  width: 100%;
+  margin-top: 10vh;
+  margin-bottom: 50px;
+  border-top: solid 1px var(--border-color);
+  border-bottom: solid 1px var(--border-color)
+}
+
+.logo-title {
+  display: flex;
 }
 
 .title {
+  /* margin-top: 10px; */
   align-self: center;
   font-size: x-large;
   font-weight: bold;
@@ -46,14 +54,18 @@ body {
   margin: 2px;
 }
 
-.box-empty {
-  width: 50px;
-  height: 50px;
+.box {
+  width: 15vw;
+  height: 15vw;
   border: 2px solid;
   border-color: rgb(164, 164, 164);
   display: grid;
   place-items: center;
   font-size: 2.4rem;
+  text-transform: uppercase;
+}
+
+.box-empty {
   text-transform: uppercase;
   color: black
 }
@@ -74,14 +86,6 @@ body {
 }
 
 .box-wrong {
-  width: 50px;
-  height: 50px;
-  border: 2px solid;
-  border-color: rgb(164, 164, 164);
-  display: grid;
-  place-items: center;
-  font-size: 2.4rem;
-  text-transform: uppercase;
   background-color: var(--wrong);
   color: white;
   animation-name: wrongBox;
@@ -89,14 +93,6 @@ body {
 }
 
 .box-close {
-  width: 50px;
-  height: 50px;
-  border: 2px solid;
-  border-color: rgb(164, 164, 164);
-  display: grid;
-  place-items: center;
-  font-size: 2.4rem;
-  text-transform: uppercase;
   background-color: var(--close);
   color: white;
   animation-name: closeBox;
@@ -104,14 +100,6 @@ body {
 }
 
 .box-correct {
-  width: 50px;
-  height: 50px;
-  border: 2px solid;
-  border-color: rgb(164, 164, 164);
-  display: grid;
-  place-items: center;
-  font-size: 2.4rem;
-  text-transform: uppercase;
   background-color: var(--correct);
   color: white;
   animation-name: correctBox;
@@ -122,9 +110,8 @@ body {
   align-items: center;
   display: flex;
   flex-direction: column;
-  width: 100%;
-  max-width: 480px;
-  overflow:hidden;
+  width: 95%;
+  max-width: 95%;
 }
 
 .keyboard-top {
@@ -133,7 +120,7 @@ body {
   grid-template-columns: repeat(10, auto);
   gap: 6px;
   margin-bottom: 4px;
-  width: 100%;
+  /* width: 100%; */
   
 }
 .keyboard-middle {
@@ -141,7 +128,7 @@ body {
   display: inline-grid;
   grid-template-columns: repeat(9, auto);
   gap: 6px;
-  width: 90%;
+  /* width: 90%; */
 }
 .keyboard-bottom {
   margin-bottom: 20px;
@@ -149,7 +136,7 @@ body {
   grid-template-columns: repeat(9, auto);
   gap: 6px;
   margin-top: 4px;
-  width: 100%;
+  /* width: 100%; */
 }
 
 .typed-input {
@@ -176,65 +163,53 @@ body {
   to {color: white}
 }
 
-.key-standard {
-  width: 100%;
-  height: 42px;
+.key {
+  all: unset;
+  height: 12vw;
+  width: 8vw;
   font-size: medium;
   border-radius: 3px;
   padding: 0px;
+  text-align: center;
+}
+
+.key-standard {
   border-color: lightgray;
   background-color: lightgray;
   text-transform: uppercase;
   color: black;
   font-weight:bold;
+  text-transform: uppercase;
+  font-weight: bold;
 }
 
 .key-wrong {
-  width: 100%;
-  height: 42px;
-  font-size: medium;
-  border-radius: 3px;
-  padding: 0px;
+  color: white;
   border-color: var(--wrong);
   background-color: var(--wrong);
-  text-transform: uppercase;
-  color: white;
-  font-weight:bold;
   animation: wrongLetter 2s, textChange 2s;
 }
 
 .key-close {
-  width: 100%;
-  height: 42px;
-  font-size: medium;
-  border-radius: 3px;
-  padding: 0px;
+  color: white;
   border-color: var(--close);
   background-color: var(--close);
-  text-transform: uppercase;
-  color: white;
-  font-weight: bold;
   animation: closeLetter 2s, textChange 2s;
 }
 
 .key-correct {
-  width: 100%;
-  height: 42px;
-  font-size: medium;
-  border-radius: 3px;
-  padding: 0px;
+  color: white;
   border-color: var(--correct);
   background-color: var(--correct);
-  text-transform: uppercase;
-  color: white;
-  font-weight: bold;
   animation: correctLetter 2s, textChange 2s;
 }
 
 .key-action {
-  width: 100%;
-  height: 42px;
+  all: unset;
+  height: 12vw;
+  width: 12vw;
   font-size: medium;
+  text-align: center;
   border-radius: 3px;
   padding: 1px;
   border-color: lightgray;
@@ -275,14 +250,24 @@ body {
 }
 
 .popup-close {
+  all: unset;
   position: absolute;
   z-index: 1;
   margin: 10px;
+  padding: 0.3rem;
   top: 0;
   right: 0;
   font-weight: bold;
   background-color: #ededed;
-  border-radius: 5px; 
+  border-radius: 50%;
+  border: solid 2px black;
+  width: 20px;
+  height: 20px;
+  text-align: center; 
+}
+
+#popup-close:hover {
+  transform: scale(1.1);
 }
 
 .popup-winner {
@@ -302,7 +287,7 @@ body {
 
 .rules-popup {
   position: absolute;
-  margin-top: 60px;
+  margin-top: 135px;
   height: 30px;
   width: 160px;
   background-color: rgb(51, 51, 51);
@@ -315,34 +300,9 @@ body {
   animation: fade-in 1s
 }
 
-.switch {
-  position: absolute;
-  left: 0;
-  top: 0;
-  padding: 10px;
-}
-
-.hardmode {
-  position: absolute;
-  left: 0;
-  top: 0;
-  line-height: 1px;
-  margin-top: 30px;
-  margin-left: 16px;
-  padding: 0px;
-  font-size: small;
-  font-weight: bold;
-}
-
-.info {
-  position: absolute;
-  right: 0;
-  top: 0;
-}
-
 .info-popup {
   position: absolute;
-  margin-top: 80px;
+  margin-top: 140px;
   z-index: 1;
   border-color: black;
   border-radius: 20px;
@@ -356,14 +316,15 @@ body {
 }
 
 .info-button {
-  margin: 10px;
   font-size: large;
   font-weight: bold;
   border-style: solid;
   border-color: black;
   color: black;
-  border-radius: 15px;
+  border-radius: 50%;
   background-color: white;
+  height: 30px;
+  width: 30px;
 }
 
 .info-box {
@@ -388,6 +349,14 @@ body {
   left: 10px;
   font-style: italic;
   font-size: small;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
 }
 
 .examples {
@@ -471,4 +440,44 @@ body {
   font-size: small;
   font-weight: bold;
   margin-top: 10px;
+}
+
+@media (min-width: 480px) {
+  .lexicon-container {
+    width: 65vw;
+    margin-left: 20vw;
+    margin-right: 15vw;
+  }
+
+  .title-container {
+    margin-top: 0;
+    border: none;
+  }
+
+  .logo-title {
+    margin-top: 10px;
+  }
+
+  .rules-popup {
+    margin-top: 50px;
+  }
+
+  .box {
+    width: 8vh;
+    height: 8vh;
+  }
+
+  .keyboard-container {
+    max-width: 70%;
+  }
+
+  .key {
+    width: 3vw;
+    height: 3vw;
+  }
+
+  .key-action {
+    width: 4.5vw;
+    height: 3vw;
+  }
 }

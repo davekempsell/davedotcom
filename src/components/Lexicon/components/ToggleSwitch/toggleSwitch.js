@@ -13,14 +13,13 @@ export function ToggleSwitch(callback, started, hardMode, notAllowed) {
     }
   }
   return (
-    <div>
+    <div className="toggleSwitch-container">
       <label className="toggle-switch">
         <input type="checkbox" checked={isToggled} onChange={onToggle} />
         <span className="switch" />
       </label>
-        <div className='hardmode'>
-          <p>HARD</p>
-          <p>MODE</p>
+      <div className='hardmode'>
+          <p>HARD MODE</p>
         </div>
     </div>
   );

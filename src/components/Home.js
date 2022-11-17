@@ -4,6 +4,7 @@ import Introduction from './Introduction';
 import MoreInfo from './MoreInfo';
 import Experience from "./Experience";
 import Projects from './Projects';
+import '../App.css';
 
 export function Home() {
   return (

@@ -7,7 +7,7 @@ function EmptyGrid(line) {
       {boxArray.map((e, index) => {
         return (
           <div 
-            className="box-empty" 
+            className="box-empty box" 
             key={`emptyBox-${index}`}>
           </div>
         )

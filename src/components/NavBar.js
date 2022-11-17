@@ -15,9 +15,9 @@ export function NavBar() {
         <a href="mailto: davekempsell87@gmail.com" target="_blank" rel="noreferrer">
           <FontAwesomeIcon icon={faEnvelope} />
         </a>
-        <a href='DJK-CV.pdf' download="DJK-CV.pdf">
+        {/* <a href='DJK-CV.pdf' download="DJK-CV.pdf">
           <FontAwesomeIcon icon={faFilePdf} />
-        </a>
+        </a> */}
       </div>
     )
   }

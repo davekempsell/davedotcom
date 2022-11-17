@@ -410,6 +410,11 @@ h1, h2, h3, h4, h5, h6, a, p, span, li {
     max-width: 500px;
   }
 
+  .more-info-text > p {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+
   .filler-container {
     display: flex;
     width: 15vw;

@@ -1,3 +1,6 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faQuestion } from "@fortawesome/free-solid-svg-icons";
+
 import linkedIn from './linkedinlogo.png'
 
 function ExampleGrid1() {
@@ -41,6 +44,7 @@ export function InfoPopUp(closePopUp, popUpState, infoState) {
     return (
       <div className="info-popup">
         <button 
+          id="popup-close"
           className='popup-close'
           type="submit"
           onClick={closePopUp}>
@@ -104,7 +108,9 @@ export function infoButton(popUpState, setInfoState) {
         className='info-button'
         type="submit"
         onClick={showInfo}
-      >?</button>
+      >
+        <FontAwesomeIcon icon={faQuestion} />
+      </button>
     </div>
   )
 }

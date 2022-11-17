@@ -19,13 +19,13 @@ function KeyboardTop(onKeyPress, letterState) {
     <div className="keyboard-top" key="keyboard-top">
       {keyValues.map((letter, index) => {
         if(letterState[letter] === 'correct') {
-          return keyboardKey("key-correct", index, letter, onKeyPress)
+          return keyboardKey("key-correct key", index, letter, onKeyPress)
         } else if(letterState[letter] === 'close') {
-          return keyboardKey("key-close", index, letter, onKeyPress)
+          return keyboardKey("key-close key", index, letter, onKeyPress)
         } else if(letterState[letter] === 'wrong') {
-          return keyboardKey("key-wrong", index, letter, onKeyPress)
+          return keyboardKey("key-wrong key", index, letter, onKeyPress)
         } else {
-          return keyboardKey("key-standard", index, letter, onKeyPress)
+          return keyboardKey("key-standard key", index, letter, onKeyPress)
         }
       })}
     </div>
@@ -40,13 +40,13 @@ function KeyboardMiddle(onKeyPress, letterState) {
     <div className="keyboard-middle">
       {keyValues.map((letter, index) => {
         if(letterState[letter] === 'correct') {
-          return keyboardKey("key-correct", index, letter, onKeyPress)
+          return keyboardKey("key-correct key", index, letter, onKeyPress)
         } else if(letterState[letter] === 'close') {
-          return keyboardKey("key-close", index, letter, onKeyPress)
+          return keyboardKey("key-close key", index, letter, onKeyPress)
         } else if(letterState[letter] === 'wrong') {
-          return keyboardKey("key-wrong", index, letter, onKeyPress)
+          return keyboardKey("key-wrong key", index, letter, onKeyPress)
         } else {
-          return keyboardKey("key-standard", index, letter, onKeyPress)
+          return keyboardKey("key-standard key", index, letter, onKeyPress)
         }
       })}
     </div>
@@ -70,11 +70,11 @@ function KeyboardBottom(onKeyPress, deleteLetter, submitGuess, letterState) {
         if(letterState[letter] === 'correct') {
           return keyboardKey("key-correct", index, letter, onKeyPress)
         } else if(letterState[letter] === 'close') {
-          return keyboardKey("key-close", index, letter, onKeyPress)
+          return keyboardKey("key-close key", index, letter, onKeyPress)
         } else if(letterState[letter] === 'wrong') {
-          return keyboardKey("key-wrong", index, letter, onKeyPress)
+          return keyboardKey("key-wrong key", index, letter, onKeyPress)
         } else {
-          return keyboardKey("key-standard", index, letter, onKeyPress)
+          return keyboardKey("key-standard key", index, letter, onKeyPress)
         }
       })}
       <button 

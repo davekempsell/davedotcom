@@ -13,6 +13,8 @@ import { InfoPopUp, infoButton } from './components/popups/infoPopUp';
 import { ToggleSwitch } from './components/ToggleSwitch/toggleSwitch';
 import { updateLetters, guessChecker, alreadyGuessed, correctLetterCheck, closeLetterCheck } from './guessCheckers/guessCheckers';
 import { lexiconLogic } from './guessCheckers/lexiconLogic'
+import NavBar from '../NavBar';
+import Filler from '../Filler';
 
 function Lexicon() {
   const TargetWord = targetWord
@@ -117,28 +119,34 @@ function Lexicon() {
   }
 
   return (
-    <div className='main-container'>
-      {PopUp(closePopUp, winState, TargetWord, popUpState)}
-      {InfoPopUp(closeInfoPopUp, popUpState, infoState)}
-      {rulesPopUp(rulesMessage, rulesState)}
-      <div className='switch'>
-        {ToggleSwitch(setHardMode, started, hardMode, notAllowed)}
+    <div className='home-container'>
+      {NavBar()}
+      <div className='lexicon-container'>
+        {PopUp(closePopUp, winState, TargetWord, popUpState)}
+        {InfoPopUp(closeInfoPopUp, popUpState, infoState)}
+        {rulesPopUp(rulesMessage, rulesState)}
+
+        <div className="title-container">
+          {ToggleSwitch(setHardMode, started, hardMode, notAllowed)}
+        <div className="logo-title">
+          <img src={Logo} className="logo" alt="logo"/>
+          <div className='title'>LEXICON</div>
+        </div>
+          {infoButton(popUpState, setInfoState)}
+        </div>
+        
+        <div>
+          {guesses.map((guess, index) => {
+            return GuessGrid(index, guess)
+          })}
+          {guessBoxes(guessLetters, winState, guesses)}
+          {emptyGrids.map(n => {
+            return EmptyGrid(n, guessLetters)
+          })}
+        </div>
+        {createKeyboard(onKeyPress, deleteLetter, submitGuess, letterState)}
       </div>
-      <div className="title-container">
-        <img src={Logo} className="logo" alt="logo"/>
-        <div className='title'>LEXICON</div>
-      </div>
-      {infoButton(popUpState, setInfoState)}
-      <div>
-        {guesses.map((guess, index) => {
-          return GuessGrid(index, guess)
-        })}
-        {guessBoxes(guessLetters, winState, guesses)}
-        {emptyGrids.map(n => {
-          return EmptyGrid(n, guessLetters)
-        })}
-      </div>
-      {createKeyboard(onKeyPress, deleteLetter, submitGuess, letterState)}
+    {Filler()}
     </div>
   );
 }

@@ -5,15 +5,15 @@ function GuessGrid(line, guess) {
       {guess.map((letter, index) => {
         if(letter.includes('!')) {
           return (
-            <div className="box-wrong" key={`guess-${index}`}>{letter[0]}</div>
+            <div className="box-wrong box" key={`guess-${index}`}>{letter[0]}</div>
           )
         } else if(letter.includes('?')) {
           return (
-            <div className="box-close" key={`guess-${index}`}>{letter[0]}</div>
+            <div className="box-close box" key={`guess-${index}`}>{letter[0]}</div>
           )
         } else {
           return (
-            <div className="box-correct" key={`guess-${index}`}>{letter}</div>
+            <div className="box-correct box" key={`guess-${index}`}>{letter}</div>
           )
         }
       })}
