@@ -10,7 +10,7 @@ import { TimeInput } from './components/timeInput'
 import NavBar from '../components/NavBar';
 import Filler from '../components/Filler';
 
-function Calculator() {
+function GmsCalculator() {
   const [boatType, setBoatType] = useState('M1x')
   const [distance, setDistance] = useState(2000)
   const [time, setTime] = useState([0,0,0])
@@ -18,8 +18,8 @@ function Calculator() {
 
   return (
     <div className="home-container">
-  
-      <div className="calculator-container">
+      {NavBar()}
+      <div className="gms-calculator-container">
         {Header()}
         <main>
           {BoatTypeMenu(boatType, setBoatType)}
@@ -29,9 +29,9 @@ function Calculator() {
           {GoldMedalSpeed(boatType, boatSpeed)}
         </main>
       </div>
-
+      {Filler()}
     </div>
   );
 }
 
-export default Calculator;
+export default GmsCalculator;

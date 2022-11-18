@@ -10,7 +10,7 @@
   box-sizing: border-box;
 }
 
-.calculator-container {
+.gms-calculator-container {
   margin-top: 10vh;
 }
 
@@ -393,10 +393,14 @@ main {
 }
 
 @media (min-width: 480px) {
-  .calculator-container {
+  .gms-calculator-container {
     width: 65%;
     margin-top: 0;
     margin-left: 20vw;
     margin-right: 15vw;
+  }
+
+  .calculator-container {
+    width: 100%;
   }
 }
