@@ -1,26 +1,12 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { faGithub, faLinkedin, faReact } from "@fortawesome/free-brands-svg-icons";
-// import { downloadCV } from "./downloadCV";
 
 export function Footer() {
 
-  const downloadCV = () => {
-    fetch('DJK-CV.pdf').then(response => {
-      response.blob().then(blob => {
-          // Creating new object of PDF file
-          const fileURL = window.URL.createObjectURL(blob);
-          // Setting various property values
-          let alink = document.createElement('a');
-          alink.href = fileURL;
-          alink.download = 'DJK-CV.pdf';
-          alink.click();
-      })
-    })
-  }
   return (
     <div className="footer-container">
-      <button id="download-cv-button" onClick={downloadCV}>Download CV</button>
+      <a href="/DJK-CV.pdf" target="_blank" rel="noreferrer">Download CV</a>
       <div className="contact-icons">
         <a href='https://github.com/davekempsell' target="_blank" rel="noreferrer">
           <FontAwesomeIcon icon={faGithub} />
