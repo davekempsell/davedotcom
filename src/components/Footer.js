@@ -6,7 +6,6 @@ export function Footer() {
 
   return (
     <div className="footer-container">
-      <a href="/DJK-CV.pdf" target="_blank" rel="noreferrer">Download CV</a>
       <div className="contact-icons">
         <a href='https://github.com/davekempsell' target="_blank" rel="noreferrer">
           <FontAwesomeIcon icon={faGithub} />

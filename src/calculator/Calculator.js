@@ -7,9 +7,6 @@ import { GoldMedalSpeed } from './components/GoldMedalSpeed';
 import { Speed } from './components/Speed';
 import { TimeInput } from './components/timeInput'
 
-import NavBar from '../components/NavBar';
-import Filler from '../components/Filler';
-
 function Calculator() {
   const [boatType, setBoatType] = useState('M1x')
   const [distance, setDistance] = useState(2000)
