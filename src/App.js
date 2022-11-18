@@ -8,7 +8,6 @@ import Calculator from './calculator/Calculator';
 import GmsCalculator from './calculator/GmsCalculator';
 import ScrollToTop from './components/ScrollToTop';
 
-
 function App() {
 
   return (

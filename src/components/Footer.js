@@ -21,7 +21,7 @@ export function Footer() {
         <p>Site built by Dave Kempsell - 2022</p>
         <div className="built-in-react">
           <p>Made with</p>
-          <FontAwesomeIcon id="react-icon" icon={faReact} />
+          <FontAwesomeIcon id="ftr-react-icon" icon={faReact} />
           <p>React.js</p>
         </div>
       </div>

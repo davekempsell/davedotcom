@@ -189,6 +189,10 @@ h1, h2, h3, h4, h5, h6, a, p, span, li {
   padding-right: 2rem;
 }
 
+.more-info-text > p > a {
+  color: white;
+}
+
 /* Styling for experience section */
 .experience-container {
   display: flex;
@@ -306,10 +310,60 @@ h1, h2, h3, h4, h5, h6, a, p, span, li {
   text-align: center;
   align-items: center;
   justify-content: center;
+  gap: 1rem;
   padding-top: 2rem;
   padding-left: 2rem;
   padding-right: 2rem;
   padding-bottom: 4rem;
+}
+
+.project-hover-content > .icons-container {
+  display: flex;
+  font-size: x-large;
+  gap: 0.5rem;
+}
+
+.project-hover-content > .icons-container > .tech-icon {
+  border: solid 1px black;
+  border-radius: 25%;
+  padding: 2px;
+  background-color: rgb(255,255,255, 0.9);
+}
+
+#html-icon {
+  color: rgb(227, 76, 38);
+}
+
+#css-icon {
+  color: rgb(38, 77, 228);
+}
+
+#react-icon {
+  color: rgb(97, 219, 251);
+}
+
+#heroku-icon {
+  color: rgb(103, 98, 166);
+}
+
+#aws-icon {
+  color: rgb(255, 153, 0)
+}
+
+#node-icon {
+  color: rgb(60, 135, 58);
+}
+
+#express-icon {
+  color: rgb(60, 60, 60);
+}
+
+#handlebars-icon {
+  color: black;
+}
+
+#mongodb-icon {
+  color: rgb(77, 179, 61);
 }
 
 .project-hover-content > a {
@@ -434,7 +488,7 @@ h1, h2, h3, h4, h5, h6, a, p, span, li {
   width: 100%;
 }
 
-#react-icon {
+#ftr-react-icon {
   font-size: x-large;
 }
 
