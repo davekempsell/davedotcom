@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { FaHtml5, FaCss3Alt, FaReact, FaAws } from 'react-icons/fa'
+import { FaHtml5, FaCss3Alt, FaReact, FaAws, FaCodeBranch } from 'react-icons/fa'
 import { GrHeroku, GrNode } from 'react-icons/gr'
 import { SiHandlebarsdotjs, SiMongodb, SiExpress } from 'react-icons/si'
 
@@ -12,6 +12,24 @@ export function Projects() {
       </div>
       <div className="project-cards-container">
 
+      <div id="dr-john-card" className="project-card" style={{ backgroundImage: `url(/images/drjohndotcom.png)`}}>
+          <div className="project-title">
+            <h2>DRJOHNTITTERINGTON.COM</h2>
+            <div className="project-hover-content">
+              <h2>DRJOHNTITTERINGTON.COM</h2>
+              <p>Creating a website for Dr John Titterington's private practice. The site has been created in React, and hosted through AWS Amplify.</p>
+              <div className="icons-container">
+                <FaHtml5 className="tech-icon" id="html-icon" />
+                <FaCss3Alt className="tech-icon" id="css-icon" />
+                <FaReact className="tech-icon" id="react-icon" />
+                <GrNode className="tech-icon" id="node-icon" />
+                <FaAws className="tech-icon" id="aws-icon" />
+              </div>
+              <Link id="dr-john-button"><FaCodeBranch/> in development</Link>
+            </div>
+          </div>
+        </div>
+        
         <div id="lexicon-card" className="project-card" style={{ backgroundImage: `url(/images/lexicon-mobile.png)`}}>
           <div className="project-title">
             <h2>LEXICON</h2>

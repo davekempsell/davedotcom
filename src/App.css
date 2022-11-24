@@ -385,6 +385,25 @@ h1, h2, h3, h4, h5, h6, a, p, span, li {
   box-shadow: 1px 1px 5px 4px #888888;
 }
 
+/* temporary styling whilst project is in development */
+#dr-john-button {
+  all: unset;
+  background-color: rgb(245, 245, 245);
+  font-weight: bold;
+  padding: 1rem;
+  border-radius: 10px;
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+#dr-john-button > a:hover {
+  cursor: default;
+  transform: none;
+}
+
 .project-card:hover > .project-title > h2 {
   display: none;
 }
@@ -397,6 +416,14 @@ h1, h2, h3, h4, h5, h6, a, p, span, li {
 
 .project-card:hover .project-hover-content {
   display: flex;
+}
+
+#dr-john-button {
+  color: rgb(58, 75, 113)
+}
+
+#dr-john-card:hover .project-title {
+  background-color: rgba(58, 75, 113, 0.9);
 }
 
 #lexicon-button {
