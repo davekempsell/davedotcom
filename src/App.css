@@ -141,6 +141,10 @@ h1, h2, h3, h4, h5, h6, a, p, span, li {
   color: black;
 }
 
+.introduction-text > h1 {
+  font-size: x-large;
+}
+
 /* Stlying for more info section */
 .more-info-container {
   display: flex;
@@ -188,6 +192,11 @@ h1, h2, h3, h4, h5, h6, a, p, span, li {
 
 .more-info-text > p > a {
   color: white;
+}
+
+.more-info-text > a {
+  color: white;
+  font-size: 0.9rem;
 }
 
 /* Styling for experience section */
@@ -412,6 +421,38 @@ h1, h2, h3, h4, h5, h6, a, p, span, li {
 
 #tastebook-button {
   color: rgb(164,118,166);
+}
+
+/* Styling for About Me component */
+.about-me-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  color: black;
+}
+
+.about-me-container > .about-image {
+  width: 100%;
+  height: 40vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 0% 50%;
+}
+
+.about-text {
+  padding: 5vw;
+}
+
+.about-text > h2 {
+  color: var(--primary-color)
+}
+
+.about-me-container > #profile-pic {
+  background-position: 0% 0%;
+  width: 90%;
 }
 
 /* Styling for footer component in mobile view */
