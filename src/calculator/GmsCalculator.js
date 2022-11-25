@@ -8,7 +8,6 @@ import { Speed } from './components/Speed';
 import { TimeInput } from './components/timeInput'
 
 import NavBar from '../components/NavBar';
-import Filler from '../components/Filler';
 
 function GmsCalculator() {
   const [boatType, setBoatType] = useState('M1x')
@@ -29,7 +28,6 @@ function GmsCalculator() {
           {GoldMedalSpeed(boatType, boatSpeed)}
         </main>
       </div>
-      {Filler()}
     </div>
   );
 }

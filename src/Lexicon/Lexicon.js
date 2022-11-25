@@ -14,7 +14,6 @@ import { ToggleSwitch } from './components/ToggleSwitch/toggleSwitch';
 import { updateLetters, guessChecker, alreadyGuessed, correctLetterCheck, closeLetterCheck } from './guessCheckers/guessCheckers';
 import { lexiconLogic } from './guessCheckers/lexiconLogic'
 import NavBar from '../components/NavBar';
-import Filler from '../components/Filler';
 
 function Lexicon() {
   const TargetWord = targetWord
@@ -146,7 +145,6 @@ function Lexicon() {
         </div>
         {createKeyboard(onKeyPress, deleteLetter, submitGuess, letterState)}
       </div>
-    {Filler()}
     </div>
   );
 }

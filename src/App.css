@@ -271,50 +271,73 @@ h1, h2, h3, h4, h5, h6, a, p, span, li {
 
 .project-card {
   display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: center;
-  width: 95%;
-  aspect-ratio: 1/1.5;
-  border: solid 1px var(--border-color);
+  justify-content: center;
+  min-width: 320px;
+  min-height: 240px;
+  max-height: 240px;
   border-radius: 10px;
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: 50% 7.5%;
   box-shadow: 1px 1px 5px 1px #888888;
   transition: box-shadow 200ms ease-in-out;
+  position: relative;
 }
 
 .project-title {
-  width: 101%;
-  height: 18.5%;
+  width: 320px;
+  height: 60px;
+  align-self: flex-end;
   display: flex;
   flex-direction: column;
-  justify-content: center; 
+  justify-content: flex-start; 
   text-align: center;
   background-color: rgba(0,0,0,0.6);
-  border: solid 1px rgba(0,0,0,0.7);
   border-radius: 0px 0px 10px 10px;
   color: white;
-  transition: all 400ms ease-in-out;
+  transition: all 500ms ease-in-out;
 }
 
 .project-title > h2 {
-  font-size: large
+  font-size: large;
+  margin: 1rem;
 }
 
 .project-hover-content {
-  height: 100%;
-  display: none;
+  position: absolute;
+  align-self: flex-start;
+  height: 240px;
+  width: 320px;
+  color: white;
+  border-radius: 10px;
+  display: flex;
   flex-direction: column;
   text-align: center;
   align-items: center;
-  justify-content: center;
-  gap: 1rem;
-  padding-top: 2rem;
-  padding-left: 2rem;
-  padding-right: 2rem;
-  padding-bottom: 4rem;
+  justify-content: space-between;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  opacity: 0;
+  transition: all 800ms ease-in-out
+}
+
+.project-card:hover .project-title {
+  opacity: 0;
+  height: 0%;
+}
+
+.project-card:hover .project-hover-content {
+  opacity: 1;
+  height: 240px;
+}
+
+.project-hover-content > h2 {
+  margin: 1rem;
+}
+
+.project-hover-content > p {
+  margin-top: 0;
+  font-size: 0.9rem;
 }
 
 .project-hover-content > .icons-container {
@@ -330,49 +353,13 @@ h1, h2, h3, h4, h5, h6, a, p, span, li {
   background-color: rgb(255,255,255, 0.9);
 }
 
-#html-icon {
-  color: rgb(227, 76, 38);
-}
-
-#css-icon {
-  color: rgb(38, 77, 228);
-}
-
-#react-icon {
-  color: rgb(97, 219, 251);
-}
-
-#heroku-icon {
-  color: rgb(103, 98, 166);
-}
-
-#aws-icon {
-  color: rgb(255, 153, 0)
-}
-
-#node-icon {
-  color: rgb(60, 135, 58);
-}
-
-#express-icon {
-  color: rgb(60, 60, 60);
-}
-
-#handlebars-icon {
-  color: black;
-}
-
-#mongodb-icon {
-  color: rgb(77, 179, 61);
-}
-
 .project-hover-content > a {
   all: unset;
   background-color: white;
   font-weight: bold;
-  padding: 1rem;
+  padding: 0.6rem;
   border-radius: 10px;
-  margin-top: 1rem;
+  margin: 1rem;
   transition: transform 200ms ease-in-out;
 }
 
@@ -390,9 +377,9 @@ h1, h2, h3, h4, h5, h6, a, p, span, li {
   all: unset;
   background-color: rgb(245, 245, 245);
   font-weight: bold;
-  padding: 1rem;
+  padding: 0.6rem;
   border-radius: 10px;
-  margin-top: 1rem;
+  margin: 1rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -408,54 +395,26 @@ h1, h2, h3, h4, h5, h6, a, p, span, li {
   display: none;
 }
 
-.project-card:hover .project-title {
-  height: 100%;
-  justify-content: flex-start;
-  border-radius: 10px;
-}
 
-.project-card:hover .project-hover-content {
-  display: flex;
-}
 
 #dr-john-button {
   color: rgb(58, 75, 113)
-}
-
-#dr-john-card:hover .project-title {
-  background-color: rgba(58, 75, 113, 0.9);
 }
 
 #lexicon-button {
   color: rgb(83,141,78);
 }
 
-#lexicon-card:hover .project-title {
-  background-color: rgba(83,141,78,0.9)
-}
-
 #gms-button {
   color: rgb(23,15,102);
-}
-
-#gms-card:hover .project-title {
-  background-color: rgba(23,15,102,0.9)
 }
 
 #bean-button {
   color: rgb(11,168,211);
 }
 
-#bean-card:hover .project-title {
-  background-color: rgba(11,168,211,0.9)
-}
-
 #tastebook-button {
   color: rgb(164,118,166);
-}
-
-#tastebook-card:hover .project-title {
-  background-color: rgba(164,118,166,0.9)
 }
 
 /* Styling for footer component in mobile view */
@@ -521,7 +480,7 @@ h1, h2, h3, h4, h5, h6, a, p, span, li {
 
 /* Styling changes for when screen is wider than 480px (desktop view) */
 
-@media (min-width: 480px) {
+@media (min-width: 481px) {
   .home-container {
     flex-direction: row;
   }
@@ -569,25 +528,16 @@ h1, h2, h3, h4, h5, h6, a, p, span, li {
     padding-right: 4rem;
   }
 
+  .experience-container {
+    gap: 2rem;
+  }
+
   .experience-card {
     max-width: 40%;
-    min-width: 350px;
-    min-height: 450px;
+    min-width: 320px;
+    min-height: 480px;
   }
+}
 
-  .project-card {
-    width: 40%;
-    min-width: 300px;
-  }
-
-  .filler-container {
-    display: flex;
-    width: 15%;
-    height: 100vh;
-    position: fixed;
-    top: 0px;
-    right: 0px;
-    bottom: 0px;
-    border-left: solid 1px var(--border-color);
-  }
+@media (max-width: 480px) {
 }
