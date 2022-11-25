@@ -1,4 +1,4 @@
-import Filler from './Filler';
+// import Filler from './Filler';
 import NavBar from './NavBar';
 import Introduction from './Introduction';
 import MoreInfo from './MoreInfo';
@@ -18,7 +18,7 @@ export function Home() {
         {Projects()}
         {Footer()}
       </div>
-      {Filler()}
+      {/* {Filler()} */}
     </div>
   )
 }

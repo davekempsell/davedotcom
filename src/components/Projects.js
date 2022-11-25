@@ -16,8 +16,8 @@ export function Projects() {
           <div className="project-title">
             <h2>DRJOHNTITTERINGTON.COM</h2>
             <div className="project-hover-content">
-              <h2>DRJOHNTITTERINGTON.COM</h2>
-              <p>Creating a website for Dr John Titterington's private practice. The site has been created in React, and hosted through AWS Amplify.</p>
+              <h2>Dr John Titterington</h2>
+              <p>Creating a website for Dr Titterington's private practice. The site has been created in React, and hosted through AWS Amplify.</p>
               <div className="icons-container">
                 <FaHtml5 className="tech-icon" id="html-icon" />
                 <FaCss3Alt className="tech-icon" id="css-icon" />

@@ -538,11 +538,12 @@ h1, h2, h3, h4, h5, h6, a, p, span, li {
     top: 0px;
     left: 0px;
     bottom: 0px;
-    border-right: solid 1px var(--border-color);
+    /* border-right: solid 1px var(--border-color); */
   }
 
   .nav-container > .desktop {
     display: flex;
+    overflow: hidden;
   }
 
   .nav-container > .mobile {
@@ -551,9 +552,12 @@ h1, h2, h3, h4, h5, h6, a, p, span, li {
 
   .main-content-container {
     width: 65vw;
+    min-width: 600px;
     overflow: scroll;
     margin-left: 20vw;
     margin-top: 0;
+    border-left: solid 1px var(--border-color);
+    border-right: solid 1px var(--border-color);
   }
 
   .devices-image {
@@ -567,16 +571,18 @@ h1, h2, h3, h4, h5, h6, a, p, span, li {
 
   .experience-card {
     max-width: 40%;
-    min-height: 500px;
+    min-width: 350px;
+    min-height: 450px;
   }
 
   .project-card {
     width: 40%;
+    min-width: 300px;
   }
 
   .filler-container {
     display: flex;
-    width: 15vw;
+    width: 15%;
     height: 100vh;
     position: fixed;
     top: 0px;
