@@ -16,9 +16,6 @@ export function NavBar() {
         <a href="mailto: davekempsell87@gmail.com" target="_blank" rel="noreferrer">
           <FontAwesomeIcon icon={faEnvelope} />
         </a>
-        {/* <a href='DJK-CV.pdf' download="DJK-CV.pdf">
-          <FontAwesomeIcon icon={faFilePdf} />
-        </a> */}
       </div>
     )
   }
@@ -27,7 +24,6 @@ export function NavBar() {
   return (
     <div>
       <div className="nav-container">
-        {/* <img src='/images/favicon.ico' alt="glasses logo"></img> */}
         <div className="home-icon">
         <Link id="home" to={'/'}>
           <FontAwesomeIcon icon={faHouse} />
