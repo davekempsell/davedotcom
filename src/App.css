@@ -3,7 +3,7 @@
 }
 
 :root {
-  --primary-color: rgba(14, 47, 125, 0.7);
+  --primary-color: rgb(86, 109, 164);
   --secondary-color: rgba(125, 36, 14);
   --tertiary-color: rgba(103, 125, 14, 0.7);
   --border-color: rgb(60, 60, 60);
@@ -488,6 +488,53 @@ h3, h4, h5, h6, a, p, span, li {
   text-decoration: none;
   color: white;
   font-size: 48px;
+}
+
+.new-navigation-container > button {
+  all: unset;
+  color: white;
+  font-size: 48px;
+}
+
+.new-navigation-container > button:hover {
+  cursor: pointer;
+}
+
+.nav-pop-up {
+  position: fixed;
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background-color: var(--primary-color);
+}
+
+.nav-pop-up > button {
+  all: unset;
+  color: white;
+  font-size: 48px;
+  align-self: flex-end;
+  padding: 2rem;
+}
+
+.nav-links-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  text-align: left;
+  padding-left: 3rem;
+}
+
+#nav-button {
+  all: unset;
+}
+
+#nav-link {
+  color: white;
+  text-decoration: none;
 }
 
 #down-arrow {

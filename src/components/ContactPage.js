@@ -1,14 +1,63 @@
-import { Link } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
+import { useState } from 'react'
 import { AiFillHome, AiOutlineMenu } from 'react-icons/ai'
 import { HiArrowNarrowDown } from 'react-icons/hi'
+import { IoIosClose } from 'react-icons/io'
 import Footer from "./Footer"
 
 function NewNavBar() {
+  const [popUpState, setPopUpState] = useState(false)
+
+  function navLink(route, title) {
+    return (
+      <>
+      <button id="nav-button" onClick={hidePopUp}>
+        <NavLink id="nav-link" to={route} style={({isActive}) => 
+            isActive
+            ?{color: 'var(--secondary-color)'}
+            :{color: 'white'}
+          }>
+            <h1>{title}.</h1>
+        </NavLink>
+      </button>
+      </>
+    )
+  }
+
+  const PopUp = () => {
+    if(popUpState) {
+    return (
+      <div className="nav-pop-up">
+        <button onClick={hidePopUp}><IoIosClose/></button>
+        <div className='nav-links-container'>
+          {navLink('/', 'HOME')}
+          {navLink('/about', 'ABOUT')}
+          {navLink('/projects', 'PROJECTS')}
+          {navLink('/contact', 'CONTACT')}
+        </div>
+      </div>
+    )
+    } else {
+      return <></>
+    }
+  }
+
+  function showPopUp() {
+    setPopUpState(true)
+  }
+
+  function hidePopUp() {
+    setPopUpState(false)
+  }
+
   return (
+    <>
+    <PopUp/>
     <div className='new-navigation-container'>
       <Link to={'/'}><AiFillHome/></Link>
-      <Link to={'/'}><AiOutlineMenu/></Link>
+      <button onClick={showPopUp}><AiOutlineMenu/></button>
     </div>
+    </>
   )
 }
 
