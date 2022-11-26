@@ -5,7 +5,6 @@ import MoreInfo from './MoreInfo';
 import Experience from "./Experience";
 import Projects from './Projects';
 import Footer from './Footer';
-import AboutMe from './AboutPage';
 import '../App.css';
 
 export function Home() {
@@ -17,7 +16,6 @@ export function Home() {
         {MoreInfo()}
         {Experience()}
         {Projects()}
-        {AboutMe()}
         {Footer()}
       </div>
     </div>

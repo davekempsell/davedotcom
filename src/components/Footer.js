@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
-import { faGithub, faLinkedin, faReact } from "@fortawesome/free-brands-svg-icons";
+import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
 export function Footer() {
 
@@ -18,12 +18,7 @@ export function Footer() {
         </a>
       </div>
       <div className ="built-by-text">
-        <p>Site built by Dave Kempsell - 2022</p>
-        <div className="built-in-react">
-          <p>Made with</p>
-          <FontAwesomeIcon id="ftr-react-icon" icon={faReact} />
-          <p>React.js</p>
-        </div>
+        <p>© Dave Kempsell 2022 | All Rights Reserved</p>
       </div>
     </div>
   )

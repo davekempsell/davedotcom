@@ -8,6 +8,7 @@ import Calculator from './calculator/Calculator';
 import GmsCalculator from './calculator/GmsCalculator';
 import ScrollToTop from './components/ScrollToTop';
 import AboutPage from './components/AboutPage';
+import ContactPage from './components/ContactPage';
 
 function App() {
 
@@ -18,6 +19,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<AboutPage />} />
+          <Route path='/contact' element={<ContactPage />} />
           <Route path="/lexicon" element={<Lexicon />} />
           <Route path="/calculator" element={<Calculator />} /> 
           <Route path="/gms-calculator" element={<GmsCalculator />} />
