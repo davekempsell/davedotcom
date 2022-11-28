@@ -7,7 +7,8 @@ import Lexicon from './Lexicon/Lexicon';
 import Calculator from './calculator/Calculator';
 import ScrollToTop from './components/ScrollToTop';
 import AboutPage from './routes/AboutPage';
-import ContactPage from './routes/ContactPage'
+import ContactPage from './routes/ContactPage';
+import Resume from './routes/Resume'
 
 function App() {
 
@@ -21,6 +22,7 @@ function App() {
           <Route path='/contact' element={<ContactPage />} />
           <Route path="/lexicon" element={<Lexicon />} />
           <Route path="/calculator" element={<Calculator />} />
+          <Route path="/cv" element={<Resume/>} />
         </Routes> 
       </BrowserRouter>
     </div>
