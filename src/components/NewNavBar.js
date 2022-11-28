@@ -42,7 +42,7 @@ export default function NewNavBar() {
         <a href='https://github.com/davekempsell' target="_blank" rel="noreferrer">
           <FaGithub />
         </a>
-        <a id="cv-icon" href='https://drive.google.com/file/d/1vU0GNsDfdMdZ2r9cz9Q7hMYbAYtA3drp/view?usp=sharing' target="_blank" rel="noreferrer">
+        <a id="cv-icon" href='https://drive.google.com/file/d/1XAtOElzw7j9Y1Wjhn2p-JaqpnNZLZ74l/view?usp=sharing' target="_blank" rel="noreferrer">
           <HiDocument />
           <p>CV</p>
         </a>
