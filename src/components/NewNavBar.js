@@ -30,7 +30,7 @@ export default function NewNavBar() {
         <div className='nav-links-container'>
           {navLink('/', 'HOME')}
           {navLink('/about', 'ABOUT')}
-          {navLink('/', 'PROJECTS')}
+          {navLink('/projects', 'PROJECTS')}
           {navLink('/contact', 'CONTACT')}
         </div>
       </div>

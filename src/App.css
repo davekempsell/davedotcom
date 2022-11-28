@@ -11,11 +11,7 @@
   --border-color: rgb(60, 60, 60);
 }
 
-h1, h2 {
-  font-family: "Merriweather", serif;
-}
-
-h3, h4, h5, h6, a, p, span, li {
+h1,h2,h3, h4, h5, h6, a, p, span, li {
   font-family: "Montserrat", sans-serif;
 }
 
@@ -214,6 +210,7 @@ h3, h4, h5, h6, a, p, span, li {
   padding-left: 2rem;
   padding-right: 2rem;
   gap: 1rem;
+  background-color: var(--light-grey);
 }
 
 .experience-card {
@@ -261,6 +258,7 @@ h3, h4, h5, h6, a, p, span, li {
   flex-direction: column;
   align-items: center;
   padding-bottom: 2rem;
+  background-color: var(--light-grey);
 }
 
 .projects-text {
@@ -680,6 +678,37 @@ h3, h4, h5, h6, a, p, span, li {
   font-size: 1rem;
 }
 
+#home-page-header-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  gap: 1rem;
+  width: 100%;
+  padding: 0 1rem;
+  transform: translateY(-10%)
+}
+
+#home-page-header-wrapper > h1 {
+  color: white;
+  margin: 0;
+  font-size: calc(1rem + 4vw)
+}
+
+#home-page-header-wrapper > h3 {
+  color: rgb(210,210,210);
+  margin: 0;
+  font-size: calc(1rem + 1vw)
+}
+
+#dave-head {
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  background-color: var(--light-grey)
+}
+
 /* Styling for Contact component */
 .contact-container {
   display: flex;
@@ -888,8 +917,8 @@ h3, h4, h5, h6, a, p, span, li {
   }
 
   .more-info-text > p {
-    padding-left: 4rem;
-    padding-right: 4rem;
+    padding-left: 20vw;
+    padding-right: 20vw;
   }
 
   .experience-container {
@@ -897,8 +926,12 @@ h3, h4, h5, h6, a, p, span, li {
   }
 
   .experience-card {
-    max-width: 40%;
+    max-width: 30%;
     min-width: 320px;
     min-height: 480px;
+  }
+
+  .project-cards-container{
+    max-width: 80vw;
   }
 }

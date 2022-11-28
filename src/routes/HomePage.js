@@ -6,18 +6,17 @@ import Experience from "../components/Experience";
 import Projects from '../components/Projects';
 import Footer from '../components/Footer';
 import '../App.css';
+import HomePageHeader from '../components/HomePageHeader';
 
 export function Home() {
   return (
-    <div className="home-container">
-      {NavBar()}
-      <div className="main-content-container">
-        {Introduction()}
-        {MoreInfo()}
-        {Experience()}
-        {Projects()}
-        {Footer()}
-      </div>
+    <div className="new-home-container">
+      {HomePageHeader()}
+      {Introduction()}
+      {MoreInfo()}
+      {Experience()}
+      {Projects()}
+      {Footer()}
     </div>
   )
 }
