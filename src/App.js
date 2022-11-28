@@ -2,13 +2,13 @@ import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 import './App.css';
-import Home from './components/Home'
+import Home from './routes/HomePage'
 import Lexicon from './Lexicon/Lexicon';
 import Calculator from './calculator/Calculator';
 import GmsCalculator from './calculator/GmsCalculator';
 import ScrollToTop from './components/ScrollToTop';
-import AboutPage from './components/AboutPage';
-import ContactPage from './components/ContactPage';
+import AboutPage from './routes/AboutPage';
+import ContactPage from './routes/ContactPage'
 
 function App() {
 
