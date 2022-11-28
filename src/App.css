@@ -781,6 +781,10 @@ h1,h2,h3, h4, h5, h6, a, p, span, li {
   color: rgb(100,100,100)
 }
 
+#desktop-view-number {
+  display: none;
+}
+
 @media (min-width: 481px) {
   .contact-details-container {
     padding: 10vw;
