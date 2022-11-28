@@ -13,7 +13,7 @@ export default function About() {
         <p>My experience in high-level sport has taught me the importance of approaching tasks with a growth-mindset, embracing challenges, and having the confidence to overcome difficulties along the way.</p>
       </div>
       <div className="image-wrapper">
-        <div id="profile-pic" style={{ backgroundImage: `url(/images/pinktshirtprofilepic.jpeg)`}}/>
+        <div id="profile-pic" style={{ backgroundImage: `url(/images/pinktshirt.png)`}}/>
       </div>
       <div className='about-text-container' id="my-journey">
         <h1>My Journey.</h1>
@@ -25,7 +25,7 @@ export default function About() {
         </div>
       </div>
       <div className='about-text-container' id="sport-career">
-        <div id="henley-eight" style={{ backgroundImage: `url(/images/henley-eight.webp)`}}/>
+        <div id="henley-eight" style={{ backgroundImage: `url(/images/henley-crew.png)`}}/>
         <h1>Sport Career.</h1>
         <p>I spent a number of years competing in rowing, representing England in 2010 and 2012.  </p>
         <p>In my career as an athlete I also won National Championship medals, set a British Record on the Concept2 rowing machine, and won Henley Royal Regatta in 2012.</p>
