@@ -13,7 +13,6 @@ import { InfoPopUp, infoButton } from './components/popups/infoPopUp';
 import { ToggleSwitch } from './components/ToggleSwitch/toggleSwitch';
 import { updateLetters, guessChecker, alreadyGuessed, correctLetterCheck, closeLetterCheck } from './guessCheckers/guessCheckers';
 import { lexiconLogic } from './guessCheckers/lexiconLogic'
-import NavBar from '../components/NavBar';
 
 function Lexicon() {
   const TargetWord = targetWord
@@ -119,7 +118,7 @@ function Lexicon() {
 
   return (
     <div className='home-container'>
-      {NavBar()}
+      {/* {NavBar()} */}
       <div className='lexicon-container'>
         {PopUp(closePopUp, winState, TargetWord, popUpState)}
         {InfoPopUp(closeInfoPopUp, popUpState, infoState)}

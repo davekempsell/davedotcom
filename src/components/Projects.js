@@ -44,7 +44,7 @@ export function Projects() {
               <GrNode className="tech-icon" id="node-icon" style={{color: 'rgb(60, 135, 58)'}}/>
               <GrHeroku className="tech-icon" id="heroku-icon" style={{color: 'rgb(103, 98, 166)'}}/>
             </div>
-            <Link id="lexicon-button" to={'/lexicon'}>Play Lexicon!</Link>
+            <Link id="lexicon-button" to={'/lexicon'} target="_blank">Play Lexicon!</Link>
           </div>
         </div>
 
@@ -62,7 +62,7 @@ export function Projects() {
               <GrNode className="tech-icon" id="node-icon" style={{color: 'rgb(60, 135, 58)'}}/>
               <FaAws className="tech-icon" id="aws-icon" style={{color: 'rgb(255, 153, 0)'}}/>
             </div>
-            <Link id="gms-button" to={'/gms-calculator'}>Use calculator</Link>
+            <Link id="gms-button" to={'/calculator'} target="_blank">Use calculator</Link>
           </div>
         </div>
 
