@@ -1,5 +1,4 @@
 
-import NavBar from '../components/NavBar';
 import Introduction from '../components/Introduction';
 import MoreInfo from '../components/MoreInfo';
 import Experience from "../components/Experience";

@@ -643,13 +643,27 @@ h1,h2,h3, h4, h5, h6, a, p, span, li {
 #pop-up-socials-wrapper {
   display: flex;
   padding: 2rem 3rem;
-  width: 220px;
+  width:300px;
   justify-content: space-between;
 }
 
 #pop-up-socials-wrapper > a {
   color: white;
   font-size: 48px;
+}
+
+#cv-icon {
+  position: relative;
+}
+
+#cv-icon > p {
+  text-decoration: none;
+  font-size: 1rem;
+  color: var(--primary-color);
+  font-weight: bold;
+  position: absolute;
+  top: 0;
+  transform: translate(57%, 30%);
 }
 
 #nav-button {

@@ -1,5 +1,4 @@
 import { HiArrowNarrowDown } from 'react-icons/hi'
-import { FaGithub, FaLinkedin } from 'react-icons/fa'
 import NewNavBar from './NewNavBar'
 
 export default function HomePageHeader() {

@@ -3,6 +3,7 @@ import { useState } from 'react'
 import { AiFillHome, AiOutlineMenu } from 'react-icons/ai'
 import { IoIosClose } from 'react-icons/io'
 import { FaGithub, FaLinkedin } from 'react-icons/fa'
+import { HiDocument } from 'react-icons/hi'
 
 export default function NewNavBar() {
   const [popUpState, setPopUpState] = useState(false)
@@ -40,6 +41,10 @@ export default function NewNavBar() {
         </a>
         <a href='https://github.com/davekempsell' target="_blank" rel="noreferrer">
           <FaGithub />
+        </a>
+        <a id="cv-icon" href='https://drive.google.com/file/d/1vU0GNsDfdMdZ2r9cz9Q7hMYbAYtA3drp/view?usp=sharing' target="_blank" rel="noreferrer">
+          <HiDocument />
+          <p>CV</p>
         </a>
       </div>
       </div>
