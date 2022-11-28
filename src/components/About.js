@@ -17,10 +17,12 @@ export default function About() {
       </div>
       <div className='about-text-container' id="my-journey">
         <h1>My Journey.</h1>
-        <p>In 2022, I left my career in sport to pursue a career in software development. I wanted to work in a role where I was responsible for my own performance, rather than that of others, and utilise my skills as an individual contributor that brought me success as an athlete.</p>
-        <p>I enrolled in a 12-week, full-time software engineering bootcamp with Makers Academy. The course involved learning technical skills such as OOP, TDD, pair programming, as well as picking up a variety of new technologies.</p>
-        <p>I love to work on new projects and develop my skills further. Since graduating from the Makers course, I have been doing freelance work, mostly building in React, and working with serverless architecture through AWS.</p>
-        <p>I'm currently looking for an opportunity within an organisation where I can continue to learn and grow. </p>
+        <div id="my-journey-wrapper">
+          <p>In 2022, I left my career in sport to pursue a career in software development. I wanted to work in a role where I was responsible for my own performance, rather than that of others, and utilise my skills as an individual contributor that brought me success as an athlete.</p>
+          <p>I enrolled in a 12-week, full-time software engineering bootcamp with Makers Academy. The course involved learning technical skills such as OOP, TDD, pair programming, as well as picking up a variety of new technologies.</p>
+          <p>I love to work on new projects and develop my skills further. Since graduating from the Makers course, I have been doing freelance work, mostly building in React, and working with serverless architecture through AWS.</p>
+          <p>I'm currently looking for an opportunity within an organisation where I can continue to learn and grow. If you're reading this, and think I sound like a good fit for your company, please do <a href="/contact" target="_blank" rel="noreferrer">Get In Touch</a>.</p>
+        </div>
       </div>
       <div className='about-text-container' id="sport-career">
         <div id="henley-eight" style={{ backgroundImage: `url(/images/henley-eight.webp)`}}/>

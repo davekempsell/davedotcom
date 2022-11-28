@@ -7,6 +7,7 @@
   --secondary-color: rgba(125, 36, 14);
   --tertiary-color: rgba(103, 125, 14, 0.7);
   --light-grey: rgb(245,245,245);
+  --alt-blue: rgb(88, 115, 175);
   --border-color: rgb(60, 60, 60);
 }
 
@@ -530,21 +531,62 @@ h3, h4, h5, h6, a, p, span, li {
   background-color: black;
 }
 
-#about-get-in-touch {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
+@media (min-width: 481px) {
+  .about-me-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
 
-#about-get-in-touch > a {
-  text-decoration: none;
-  background-color: white;
-  background-color: var(--primary-color);
-  color: white;
-  margin-bottom: 2rem;
-  padding: 1rem;
-  border-radius: 10px;
-  width: fit-content;
+  .about-text-container {
+    width:50%;
+    padding: 2rem 10vw;
+  }
+
+  .image-wrapper {
+    width: 50%;
+    height: 100vh;
+    background-color: var(--alt-blue);
+  }
+
+  #profile-pic {
+    max-width: 40vw;
+    max-height: 40vw;
+  }
+
+  #henley-eight {
+    max-width: 40vw;
+    max-height: 20vw;
+  }
+
+  #my-journey {
+    width: 100%;
+    padding: 3rem;
+    justify-content: flex-start;
+    min-height: fit-content;
+  }
+
+  #my-journey > h1 {
+    padding: 0 1rem;
+  }
+
+  #my-journey-wrapper {
+    display: flex;
+  }
+
+  #my-journey-wrapper > p {
+    width: 25%;
+    margin: 1rem 0;
+    padding: 1rem;
+    border-right: solid 1px var(--border-color)
+  }
+
+  #my-journey-wrapper > p:last-child {
+    border: none;
+  }
+
+  #my-journey-wrapper > p > a {
+    color: var(--alt-blue)
+  }
 }
 
 /* Styling for navigation bar */
@@ -673,13 +715,14 @@ h3, h4, h5, h6, a, p, span, li {
   font-family: "Montserrat", sans-serif;
   font-weight: bolder;
   margin: 0;
-
 }
 
 .contact-detail {
   width: 100%;
   padding: 10px 0px;
-  border-top: 1px solid rgb(230,230,230)
+  border-top: 1px solid rgb(230,230,230);
+  color: black;
+  text-decoration: none;
 }
 
 .contact-detail:last-child {
@@ -693,6 +736,47 @@ h3, h4, h5, h6, a, p, span, li {
 .contact-detail > p {
   margin: 10px 0px;
   color: rgb(100,100,100)
+}
+
+@media (min-width: 481px) {
+  .contact-details-container {
+    padding: 10vw;
+    gap: 10vw;
+  }
+  .get-in-touch-wrapper {
+    width: 100%;
+    padding: none;
+  }
+
+  .get-in-touch-wrapper > h1 {
+    font-size: 64px;
+  }
+
+  #contact-details-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .contact-detail {
+    width: 30%;
+    border: none;
+    text-align: center;
+    border: none;
+    border-right: solid 1px rgb(230,230,230)
+  }
+
+  #desktop-view-number {
+    display: block;
+  }
+
+  #mobile-view-number {
+    display: none;
+  }
+
+  .contact-detail:last-child {
+    border: none;
+  }
 }
 
 /* Styling for footer component in mobile view */
@@ -817,7 +901,4 @@ h3, h4, h5, h6, a, p, span, li {
     min-width: 320px;
     min-height: 480px;
   }
-}
-
-@media (max-width: 480px) {
 }

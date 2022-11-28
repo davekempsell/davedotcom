@@ -12,7 +12,7 @@ export default function NewNavBar() {
       <button id="nav-button" onClick={hidePopUp}>
         <NavLink id="nav-link" to={route} style={({isActive}) => 
             isActive
-            ?{color: 'var(--secondary-color)'}
+            ?{color: 'black'}
             :{color: 'white'}
           }>
             <h1>{title}.</h1>
@@ -30,7 +30,7 @@ export default function NewNavBar() {
         <div className='nav-links-container'>
           {navLink('/', 'HOME')}
           {navLink('/about', 'ABOUT')}
-          {navLink('/projects', 'PROJECTS')}
+          {navLink('/', 'PROJECTS')}
           {navLink('/contact', 'CONTACT')}
         </div>
       </div>
