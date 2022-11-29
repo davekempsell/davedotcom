@@ -1,11 +1,17 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import { Link } from 'react-router-dom'
 
 export function Footer() {
 
   return (
     <div className="footer-container">
+      <div className="footer-nav-links">
+        <Link to={'/'}>Home</Link>
+        <Link to={'/about'}>About</Link>
+        <Link to={'/contact'}>Contact</Link>
+      </div>
       <div className="contact-icons">
         <a href='https://github.com/davekempsell' target="_blank" rel="noreferrer">
           <FontAwesomeIcon icon={faGithub} />
