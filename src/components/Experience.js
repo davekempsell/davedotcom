@@ -9,7 +9,7 @@ export function Experience() {
               <FontAwesomeIcon icon={faCode} />
             </div>
             <div className="experience-text">
-              <h3>Frontend Experience</h3>
+              <h3>Frontend Experience.</h3>
               <p>I enjoy creating new websites and single page apps, using React for its scalability and components. I love to experiment with new design ideas and see what I've created come to life in the browser.</p>
             </div>
             <div className="languages-container">
@@ -22,14 +22,14 @@ export function Experience() {
               <FontAwesomeIcon icon={faCode} />
             </div>
             <div className="experience-text">
-              <h3>Backend Experience</h3>
+              <h3>Full-Stack Experience.</h3>
               <p>I have experience of building applications using the whole tech stack, creating APIs, and utilising cloud-based serverless architecture.</p>
             </div>
             <div className="languages-container">
               <h3>Languages</h3>
               <p>Node.JS, Ruby, Python, MongoDB</p>
               <h3>Dev Tools</h3>
-              <p>Heroku, PostmanAPI, MongoDB Atlas, Express</p>
+              <p>AWS, Heroku, PostmanAPI, MongoDB Atlas, Express</p>
             </div>
           </div>
         </div>
