@@ -262,11 +262,12 @@ body {
   border: solid 2px black;
   width: 20px;
   height: 20px;
-  text-align: center; 
+  text-align: center;
 }
 
 #popup-close:hover {
   transform: scale(1.1);
+  cursor: pointer;
 }
 
 .popup-winner {
@@ -324,6 +325,11 @@ body {
   background-color: white;
   height: 30px;
   width: 30px;
+}
+
+.info-button:hover {
+  transform: scale(1.1);
+  cursor: pointer;
 }
 
 .info-box {

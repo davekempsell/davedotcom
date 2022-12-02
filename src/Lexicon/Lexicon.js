@@ -1,9 +1,10 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
+import axios from 'axios'
 import './lexicon.css'
 import Logo from './lexBrickLogo.png'
 import EmptyGrid from './components/emptyGrid';
 import GuessGrid from './components/guessGrid'
-import targetWord from "./wordlists/targetWord"
+import RandomWord from "./wordlists/targetWord"
 import allowedWords from './wordlists/allowedWords';
 import guessBoxes from './components/guessBoxes';
 import { createKeyboard } from './components/keyboard';
@@ -15,7 +16,6 @@ import { updateLetters, guessChecker, alreadyGuessed, correctLetterCheck, closeL
 import { lexiconLogic } from './guessCheckers/lexiconLogic'
 
 function Lexicon() {
-  const TargetWord = targetWord
   const [guesses, setGuesses]  = useState([])
   const [emptyGrids, setEmptyGrids] = useState([1,2,3,4,5])
   const [winState, setWinState] = useState(false)
@@ -28,6 +28,17 @@ function Lexicon() {
   const [hardMode, setHardMode] = useState(false)
   const [started, setStarted] = useState(false)
   const [infoState, setInfoState] = useState(false)
+  const [TargetWord, setTargetWord] = useState('')
+
+  // using axios to GET today's word from backend server
+  useEffect(() => {
+    axios.get('http://localhost:3001').then((response) => {
+      setTargetWord(response.data.word)
+    })
+    .catch((error) => {
+      setTargetWord(RandomWord)
+    })
+  }, [])
 
   // Function is run after each guess to check if the game has ended,
   // due to matching the target word, or running out of guesses.
@@ -36,16 +47,17 @@ function Lexicon() {
       setEndState(true)
       setWinState(true)
       setPopUpState(true)
-    } else if(guesses.length > 5) {
+    } else if(guesses.length > 4) {
       setEndState(true)
       setPopUpState(true)
+      
     }
   }
 
   // Inputting letters using the onscreen keyboard
   // also, checking the selected letter is available to use in a guess (hard mode)
   const onKeyPress = key => {
-    if(!infoState) {
+    if(!infoState && guesses.length < 6) {
       if(hardMode && letterState[key.target.value] === 'wrong') {
         notAllowed('Letter not in word')
       } else if(guessLetters.length < 5) {
@@ -57,7 +69,7 @@ function Lexicon() {
 
   // Removing the last letter from the guessLetters array, set on the Delete key
   const deleteLetter = () => {
-    if(!infoState){
+    if(!infoState && guesses.length < 6){
       setGuessLetters(guessLetters.slice(0,-1))
     }
   }
@@ -71,7 +83,7 @@ function Lexicon() {
     const reuseGreen = correctLetterCheck(guesses, guessWord)
     const reuseYellow = closeLetterCheck(guesses, guessWord)
 
-    if(!endState && !winState && !infoState) {
+    if(!endState && !winState && !infoState && guesses.length < 6) {
       if(guessLetters.length < 5) {
         notAllowed('Not enough letters')
       } else if(!allowedWords.includes(guessWord.toLowerCase())){
