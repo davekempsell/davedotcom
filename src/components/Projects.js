@@ -9,6 +9,7 @@ export function Projects() {
       <div className="projects-text">
         <h3>Projects</h3>
         <p>Here are some of the projects I've been working on recently:</p>
+        <p id="project-detail-prompt">(Click on each project for more information)</p>
       </div>
       <div className="project-cards-container">
 
@@ -36,13 +37,14 @@ export function Projects() {
           </div>
           <div className="project-hover-content" style={{backgroundColor: 'rgba(83,141,78,0.9)'}}>
             <h2>LEXICON</h2>
-            <p>Lexicon is a single page React app, based on Wordle. It was built to create an 'extra-hard' mode, for a more challenging playing experience.</p>
+            <p>Lexicon is a single page React app, based on Wordle, using a custom API. It was built to create an 'extra-hard' mode, for a more challenging playing experience.</p>
             <div className="icons-container">
               <FaHtml5 className="tech-icon" id="html-icon" style={{color: 'rgb(227, 76, 38)'}}/>
               <FaCss3Alt className="tech-icon" id="css-icon" style={{color: 'rgb(38, 77, 228)'}}/>
               <FaReact className="tech-icon" id="react-icon" style={{color: 'rgb(97, 219, 251)'}}/>
               <GrNode className="tech-icon" id="node-icon" style={{color: 'rgb(60, 135, 58)'}}/>
-              <GrHeroku className="tech-icon" id="heroku-icon" style={{color: 'rgb(103, 98, 166)'}}/>
+              <SiExpress className="tech-icon" id="express-icon" style={{color: 'rgb(60, 60, 60)'}}/>
+              <FaAws className="tech-icon" id="aws-icon" style={{color: 'rgb(255, 153, 0)'}}/>
             </div>
             <Link id="lexicon-button" to={'/lexicon'} target="_blank">Play Lexicon!</Link>
           </div>
