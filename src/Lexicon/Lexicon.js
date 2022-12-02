@@ -32,7 +32,7 @@ function Lexicon() {
 
   // using axios to GET today's word from backend server
   useEffect(() => {
-    axios.get('http://localhost:3001').then((response) => {
+    axios.get('http://lexiconbackend-env.eba-e6znxent.us-east-1.elasticbeanstalk.com/').then((response) => {
       setTargetWord(response.data.word)
     })
     .catch((error) => {

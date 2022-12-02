@@ -68,7 +68,7 @@ function KeyboardBottom(onKeyPress, deleteLetter, submitGuess, letterState) {
       </button>
       {keyValues.map((letter, index) => {
         if(letterState[letter] === 'correct') {
-          return keyboardKey("key-correct", index, letter, onKeyPress)
+          return keyboardKey("key-correct key", index, letter, onKeyPress)
         } else if(letterState[letter] === 'close') {
           return keyboardKey("key-close key", index, letter, onKeyPress)
         } else if(letterState[letter] === 'wrong') {
