@@ -28,17 +28,19 @@ function Lexicon() {
   const [hardMode, setHardMode] = useState(false)
   const [started, setStarted] = useState(false)
   const [infoState, setInfoState] = useState(false)
-  const [TargetWord, setTargetWord] = useState('')
+  // const [TargetWord, setTargetWord] = useState('')
+
+  const TargetWord = RandomWord
 
   // using axios to GET today's word from backend server
-  useEffect(() => {
-    axios.get('http://lexiconbackend-env.eba-e6znxent.us-east-1.elasticbeanstalk.com/').then((response) => {
-      setTargetWord(response.data.word)
-    })
-    .catch((error) => {
-      setTargetWord(RandomWord)
-    })
-  }, [])
+  // useEffect(() => {
+  //   axios.get('http://lexiconbackend-env.eba-e6znxent.us-east-1.elasticbeanstalk.com/').then((response) => {
+  //     setTargetWord(response.data.word)
+  //   })
+  //   .catch((error) => {
+  //     setTargetWord(RandomWord)
+  //   })
+  // }, [])
 
   // Function is run after each guess to check if the game has ended,
   // due to matching the target word, or running out of guesses.
