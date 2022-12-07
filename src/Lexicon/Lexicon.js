@@ -1,5 +1,5 @@
-import React, { useState, } from 'react'
-// import axios from 'axios'
+import React, { useState, useEffect } from 'react'
+import axios from 'axios'
 import './lexicon.css'
 import Logo from './lexBrickLogo.png'
 import EmptyGrid from './components/emptyGrid';
@@ -28,19 +28,18 @@ function Lexicon() {
   const [hardMode, setHardMode] = useState(false)
   const [started, setStarted] = useState(false)
   const [infoState, setInfoState] = useState(false)
-  // const [TargetWord, setTargetWord] = useState('')
 
-  const TargetWord = RandomWord
+  const [TargetWord, setTargetWord] = useState(RandomWord)
 
   // using axios to GET today's word from backend server
-  // useEffect(() => {
-  //   axios.get('http://lexiconbackend-env.eba-e6znxent.us-east-1.elasticbeanstalk.com/').then((response) => {
-  //     setTargetWord(response.data.word)
-  //   })
-  //   .catch((error) => {
-  //     setTargetWord(RandomWord)
-  //   })
-  // }, [])
+  useEffect(() => {
+    axios.get('https://lexicon-api-sb42.onrender.com/').then((response) => {
+      setTargetWord(response.data.word)
+    })
+    .catch((error) => {
+      setTargetWord(RandomWord)
+    })
+  }, [])
 
   // Function is run after each guess to check if the game has ended,
   // due to matching the target word, or running out of guesses.

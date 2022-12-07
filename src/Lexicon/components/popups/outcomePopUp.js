@@ -6,8 +6,7 @@ function outcomeText(state, word) {
       <div className="popup-winner">
         <h1>Winner Winner!</h1>
         <h4>Congratulations on beating Lexicon!</h4>
-        {/* <p>Lexicon has a brand new word each day, come back tomorrow to try and beat Lexicon again!</p> */}
-        <p>To play again, just refresh the page for a new word!</p>
+        <p>Lexicon has a brand new word each day, come back tomorrow to try and beat Lexicon again!</p>
       </div>
     )
   } else {
@@ -15,8 +14,7 @@ function outcomeText(state, word) {
       <div className="popup-loser">
         <h1>Unlucky!</h1>
         <h4>The word you were looking for was {word}</h4>
-        {/* <p>Lexicon has a brand new word each day, come back tomorrow to try again!</p> */}
-        <p>To play again, just refresh the page for a new word!</p>
+        <p>Lexicon has a brand new word each day, come back tomorrow to try again!</p>
       </div>
     )
   }

@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import { FaHtml5, FaCss3Alt, FaReact, FaAws, FaCodeBranch } from 'react-icons/fa'
 import { GrHeroku, GrNode } from 'react-icons/gr'
-import { SiHandlebarsdotjs, SiMongodb, SiExpress } from 'react-icons/si'
+import { SiHandlebarsdotjs, SiMongodb, SiExpress, SiNetlify } from 'react-icons/si'
 
 export function Projects() {
   return (
@@ -45,7 +45,7 @@ export function Projects() {
               <GrNode className="tech-icon" id="node-icon" style={{color: 'rgb(60, 135, 58)'}}/>
               <SiMongodb className="tech-icon" id="mongodb-icon" style={{color: 'rgb(77, 179, 61)'}}/>
               <SiExpress className="tech-icon" id="express-icon" style={{color: 'rgb(60, 60, 60)'}}/>
-              <FaAws className="tech-icon" id="aws-icon" style={{color: 'rgb(255, 153, 0)'}}/>
+              <SiNetlify className="tech-icon" id="netlify-icon" style={{color: '#00C7B7'}}/>
             </div>
             <Link id="lexicon-button" to={'/lexicon'} target="_blank">Play Lexicon!</Link>
           </div>
@@ -63,7 +63,7 @@ export function Projects() {
               <FaCss3Alt className="tech-icon" id="css-icon" style={{color: 'rgb(38, 77, 228)'}}/>
               <FaReact className="tech-icon" id="react-icon" style={{color: 'rgb(97, 219, 251)'}}/>
               <GrNode className="tech-icon" id="node-icon" style={{color: 'rgb(60, 135, 58)'}}/>
-              <FaAws className="tech-icon" id="aws-icon" style={{color: 'rgb(255, 153, 0)'}}/>
+              <SiNetlify className="tech-icon" id="netlify-icon" style={{color: '#00C7B7'}}/>
             </div>
             <Link id="gms-button" to={'/calculator'} target="_blank">Use calculator</Link>
           </div>
