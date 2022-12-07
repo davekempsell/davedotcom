@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react'
-import axios from 'axios'
+import React, { useState, } from 'react'
+// import axios from 'axios'
 import './lexicon.css'
 import Logo from './lexBrickLogo.png'
 import EmptyGrid from './components/emptyGrid';
