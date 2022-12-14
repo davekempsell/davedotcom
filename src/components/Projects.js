@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
-import { FaHtml5, FaCss3Alt, FaReact, FaAws, FaCodeBranch } from 'react-icons/fa'
+import { FaHtml5, FaCss3Alt, FaReact, FaAws, FaCodeBranch, FaStrava } from 'react-icons/fa'
 import { GrHeroku, GrNode } from 'react-icons/gr'
-import { SiHandlebarsdotjs, SiMongodb, SiExpress } from 'react-icons/si'
+import { SiHandlebarsdotjs, SiMongodb, SiExpress, SiNetlify } from 'react-icons/si'
 
 export function Projects() {
   return (
@@ -12,6 +12,26 @@ export function Projects() {
         <p id="project-detail-prompt">(Click on each project for more information)</p>
       </div>
       <div className="project-cards-container">
+
+      <div id="festive-500-card" className="project-card" style={{ backgroundImage: `url(/images/festive500.png)`}}>
+          <div className="project-title">
+            <h2>Festive 500 Tracker</h2>
+          </div>
+          <div className="project-hover-content" style={{backgroundColor: 'rgba(28,30,61, 0.9)'}}>
+            <h2>Festive 500 Tracker</h2>
+            <p>Using the Strava API to create a tracker of my progress in the Festive 500 Challenge.</p>
+            <div className="icons-container">
+              <FaHtml5 className="tech-icon" id="html-icon" style={{color: 'rgb(227, 76, 38)'}}/>
+              <FaCss3Alt className="tech-icon" id="css-icon" style={{color: 'rgb(38, 77, 228)'}}/>
+              <FaReact className="tech-icon" id="react-icon" style={{color: 'rgb(97, 219, 251)'}}/>
+              <GrNode className="tech-icon" id="node-icon" style={{color: 'rgb(60, 135, 58)'}}/>
+              <SiExpress className="tech-icon" id="express-icon" style={{color: 'rgb(60, 60, 60)'}}/>
+              <SiNetlify className="tech-icon" id="netlify-icon" style={{color: 'rgb(0, 199, 183)'}}/>
+              <FaStrava className="tech-icon" id="strava-icon" style={{color: 'rgb(252, 76, 2)'}}/>
+            </div>
+            <a id="festive500-button" href="https://mellifluous-hummingbird-3a5779.netlify.app/" target="_blank" rel="noreferrer">View site</a>
+          </div>
+        </div>
 
       <div id="dr-john-card" className="project-card" style={{ backgroundImage: `url(/images/drjohndotcom.png)`}}>
           <div className="project-title">

@@ -29,7 +29,7 @@ function Lexicon() {
   const [started, setStarted] = useState(false)
   const [infoState, setInfoState] = useState(false)
 
-  const [TargetWord, setTargetWord] = useState(RandomWord)
+  const [TargetWord, setTargetWord] = useState('')
 
   // using axios to GET today's word from backend server
   useEffect(() => {
