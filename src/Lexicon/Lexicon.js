@@ -31,12 +31,16 @@ function Lexicon() {
 
   const [TargetWord, setTargetWord] = useState('')
 
-  // using axios to GET today's word from backend server
+  // using axios to GET today's word from backend server, set TargetWord as
+  // a random word if no word retrieved from server.
   useEffect(() => {
     axios.get('https://lexicon-api-sb42.onrender.com/').then((response) => {
-      setTargetWord(response.data.word)
+      let apiWord = response.data.word
+      let todaysWord = apiWord ? apiWord : RandomWord
+      setTargetWord(todaysWord)
     })
     .catch((error) => {
+      console.log(error)
       setTargetWord(RandomWord)
     })
   }, [])
